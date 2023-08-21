@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/responsive/respon-new.css">
+    <title>Tin Tức</title>
+</head>
+<body>
+    <div id="main" class="js-main">
+        <div id="header">
+            <div class="header__left">
+                <div class="header__logo">
+                    <div class="header__musicShow">
+                        <audio src="./assets/audio/ThemeMusic.mp3"></audio>
+                    </div>
+                    <div class="header__musicHide"></div>
+                    <img src="./assets/img/Logogs.png" alt="logo">
+                </div>
+                <div class="header__nav">
+                    <!-- add menu tablet mobile -->
+                    <div class="header-nav__menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <!-- end menu tablet-mobile -->
+                    <ul class="nav">
+                        <!-- close tablet mobile -->
+                        <li class="nav__close"><a href="#">
+                            <i class="fas fa-times"></i>
+                        </a></li>
+                        <!-- end close tablet-mobile -->
+                        <li><a href="./home.html">Trang Chủ</a></li>
+                        <li class="border__original "><a href="./news.html">Tin Tức</a></li>
+                        <li><a href="./character.html">Nhân Vật</a></li>
+                        <li><a>Tư Liệu
+                            <i class="nav__arrow-down fas fa-caret-down"></i>
+                        </a>
+                            <ul class="subnav">
+                                <li><a href="./reviewgame.html">Giới Thiệu Game</a></li>
+                                <li><a href="./world.html">Thế Giới</a></li>
+                                <li><a href="./town.html">Tạp Chí</a></li>
+                                <li><a href="./comic.html">Truyện Tranh</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Khác
+                            <i class="nav__arrow-down fas fa-caret-down"></i>
+                        </a>
+                            <ul class="subnav">
+                                <li><a href="">HoYoLAB</a></li>
+                                <li><a href="">Trung Tâm Nạp</a></li>
+                                <li><a href="">Mã Quà</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__right">
+                <ul class="nav__right">
+                    <li class="js-login"><a class="pointer">Đăng Nhập
+                        <i class="navr__user fas fa-user"></i>
+                    </a></li>
+                    <li class="header__download"><a href="">Tải Game</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- news highlight -->
+        <div id="news__highlight">
+            <div class="news__bg"></div>
+            <div class="items__highlight">
+                <ul class="list__items">
+                    <!-- item-highlight 1 -->
+                    <li class="item__highlight-js item__highlight-1" id="item__highlight-1" title="Giới thiệu nhân vật trong Genshin Impart - Aloy : Thợ săn bí ẩn"><a href="">
+                        <div class="imgwrap">
+                            <img src="./assets/img/New/newshl1.jpg" alt="Giới thiệu nhân vật trong Genshin Impart - Aloy : Thợ săn bí ẩn ">
+                        </div>
+                        <h3>Giới thiệu nhân vật trong Genshin Impart - Aloy : Thợ săn bí ẩn </h3>
+                        <p>Một thợ săn ưu tú sẽ luôn tìm kiếm những bãi săn mạo hiểm và mới lạ </p>
+                        <div class="news__tail">
+                            <p class="date">27/8/2021</p>
+                            <p class="support">Tư vấn</p>
+                        </div>
+                    </a></li>
+                    <!-- item-highlight 2 -->
+                    <li class="item__highlight-js item__highlight-2" id="item__highlight-2" title="Cung của tôi chỉ dùng để giúp đỡ mọi người."><a href="">
+                        <div class="imgwrap">
+                            <img src="./assets/img/New/newshl2.jpg" alt="Cung của tôi chỉ dùng để giúp đỡ mọi người.' ">
+                        </div>
+                        <h3>"Cung của tôi chỉ dùng để giúp đỡ mọi người." </h3>
+                        <p>Nhà lữ hành thân mến!</p>
+                        <div class="news__tail">
+                            <p class="date">27/8/2021</p>
+                            <p class="support">Tư vấn</p>
+                        </div>
+                    </a></li>
+                    <!-- item-highlight 3 -->
+                    <li class="item__highlight-js item__highlight-3" id="item__highlight-3" title="Cảnh sắc vĩnh hằng ngàn năm như một, thế giới loài người lại ảo như mây bay"><a href="">
+                        <div class="imgwrap">
+                            <img src="./assets/img/New/newshl3.jpg" alt="Cảnh sắc vĩnh hằng ngàn năm như một, thế giới loài người lại ảo như mây bay ">
+                        </div>
+                        <h3>"Cảnh sắc vĩnh hằng ngàn năm như một, thế giới loài người lại ảo như mây bay"</h3>
+                        <p>Các nhà lữ hành thân mến, hôm nay xin được giới thiệu đến các bạn nhân vật mới - Raiden-Shogun </p>
+                        <div class="news__tail">
+                            <p class="date">26/8/2021</p>
+                            <p class="support">Tư vấn</p>
+                        </div>
+                    </a></li>
+                </ul>
+                <!-- next-prev -->
+                <a class="btn__news-hl--next">
+                    <i class="fas fa-angle-right"></i>
+                </a>
+                <a class="btn__news-hl--prev">
+                    <i class="fas fa-angle-left"></i>
+                </a>
+                <!-- dot -->
+                <div class="list__btn-dot">
+                    <div class="btn-dot__item active_dot">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <div class="btn-dot__item">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <div class="btn-dot__item">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="wrap__content">
+            <!-- category -->
+            <div class="category">
+                <ul class="list__category">
+                    <li class="tablink-js active" onclick="openNew(event,'newsHot') "><a>Mới</a></li>
+                    <li class="tablink-js" onclick="openNew(event,'newsAdvise') " ><a>Tư Vấn</a></li>
+                    <li class="tablink-js" onclick="openNew(event,'newsOld') "><a>Bản Tin</a></li>
+                    <li class="tablink-js" onclick="openNew(event,'newsEvent') "><a>Sự Kiện</a></li>
+                </ul>
+            </div>
+
+            <div class="news">
+                <!-- news hot -->
+                <div class="tabcontent-js" id="newsHot">
+                    <ul class="list__news">
+                        
+    
+                    </ul>
+                    <div class="viewmore">Tải thêm</div>
+                </div>
+
+                <!-- Advise -->
+                <div class="tabcontent-js news__hidden" id="newsAdvise">
+                    <ul class="list__news">
+                        
+                    </ul>
+                    <div class="viewmore">Tải thêm</div>
+
+                </div>
+
+                <!-- Bản tin -->
+                <div class="tabcontent-js news__hidden" id="newsOld">
+                    <ul class="list__news">
+                        
+                    </ul>
+                    <div class="viewmore">Tải thêm</div>
+
+                </div>
+
+                <!-- Event -->
+                <div class="tabcontent-js news__hidden" id="newsEvent">
+                    <ul class="list__news ">
+                               
+                    </ul>
+                    <div class="viewmore">Tải thêm</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="footer__top">
+                <div class="footer__icons">
+                    <ul class="list__icons">
+                        <li><a href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fab fa-youtube"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fas fa-camera"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fas fa-atom"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fas fa-globe"></i>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__languages">
+                    <ul class="languages__block">
+                        <li><a class="pointer">
+                            <i class="fas fa-globe-asia"></i>
+                        </a></li>
+                        <li><a class="pointer">
+                            <p>Tiếng Việt</p>
+                        </a></li>
+                        <li class="js-ic-arrow"><a class="pointer">
+                            <i class="fas fa-caret-down footer__ic-arrow"></i>
+                        </a>
+                            <div class="footer__languages-wrap js-languages-wrap">
+                                <ul class="list__languages">
+                                    <li><a href="">
+                                        中文（繁體）
+                                    </a></li>
+                                    <li><a href="">
+                                        Deutsch
+                                    </a></li>
+                                    <li><a href="">
+                                        English
+                                    </a></li>
+                                    <li><a href="">
+                                        Español
+                                    </a></li>
+                                    <li><a href="">
+                                        Français
+                                    </a></li>
+                                    <li><a href="">
+                                        Tiếng Việt
+                                    </a></li>
+                                    <li><a href="">
+                                        日本語
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__main">
+                <div class="footer__wrap">
+                    <div class="footer__content">
+                        <div class="footer__content-logo">
+                            <div class="img__logo">
+                                <img src="./assets/img/logo footer1.png" alt="">
+                            </div>
+                            <div class="logo__game">
+                                <img src="./assets/img/Logogs.png" alt="">
+                            </div>
+                        </div>
+                        <div class="footer__content-info">
+                            <div class="links text">
+                                <a href="">Chính Sách Về Quyền Riêng Tư</a>
+                                <a href="">Điều Khoản Dịch Vụ</a>
+                                <br>
+                                <br>
+                                <a href="">Giới Thiệu Công Ty</a>
+                                <a href="">Liên Hệ Chúng Tôi</a>
+                            </div>
+                            <div class="coppy__right text">
+                                Copyright © 2020 miHoYo All Rights Reserved
+                            </div>
+                            <div class="extra__info text">
+                                "PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
+                            </div>
+                            <div class="epic text">
+                                <p>Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- modal login -->
+        <!-- Modal -->
+    <div class="modal js-modal">
+        <div class="modal__container js-modalContainer">
+            <div class="modal__header">
+                <img src="./assets/img/login.png" alt="">
+            </div>
+
+            <div class="modal__close js-modal-close">
+                <i class="fas fa-times modal__close-ic"></i>
+            </div>
+            <div class="clear"></div>
+
+            <div class="modal__body">
+                <!-- attribute for trong thẻ label chỉ sd với id -->
+                <label for="modal-user" class="modal__label">
+                    <i class="fas fa-user"></i>
+                    Tài Khoản:
+                </label>
+                <input id="modal-user" type="text" class="modal__input-user" placeholder="Tên Người Dùng/ Email">
+
+                <label for="modal-pass" class="modal__label">
+                    <i class="fas fa-key"></i>
+                    Mật Khẩu:
+                </label>
+                <input id="modal-pass" type="password" class="modal__input-pass" placeholder="Mật Khẩu">
+
+                <button class="modal__login">
+                    Đăng Nhập
+                </button>
+                
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-head">
+                    <a href="">Request Support</a>
+                    <a href="">Registration</a>
+                </div>
+
+                <p class="modal__footer-subhead">Hoặc đăng nhập bằng các tài khoản sau</p>
+
+                <div class="modal__footer-icon">
+                    <img src="./assets/img/logo fb.png" alt="">
+                    <img src="./assets/img/logo twt.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/news.js"></script>
+    <script>
+        // header music
+        var btnMusicShow = document.querySelector(".header__musicShow");
+        var btnMusicHide = document.querySelector(".header__musicHide");
+        var audioHeader = document.querySelector(".header__musicShow audio")
+
+        btnMusicShow.addEventListener("click" , function(){
+            btnMusicHide.style.visibility = "visible";
+            btnMusicShow.style.visibility = "hidden";
+            audioHeader.pause();
+        })
+
+        btnMusicHide.addEventListener("click" , function(){
+            btnMusicHide.style.visibility = "hidden";
+            btnMusicShow.style.visibility = "visible";
+            audioHeader.play();
+        })
+    </script>
+    
+</body>
+</html>

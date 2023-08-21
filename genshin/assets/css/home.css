@@ -1,0 +1,961 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clear {
+    clear: both;
+}
+
+.pointer {
+    cursor: pointer;
+}
+#main{
+    font-family: tahoma, arial;
+}
+/* fix */
+/* header */
+#header{
+    height: 66px;
+    background-color: rgba(17,17,17,0.75);
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    opacity: 0.8;
+    white-space: nowrap;
+    user-select: none;
+}
+
+#header .header__left {
+    display: flex;
+    margin-left: 100px;
+}
+.header__logo{
+    max-height: 66px;
+    padding-right: 60px;
+    position: relative;
+}
+
+.header__musicHide{
+    width: 35px;
+    height: 33px;
+    transform: translate(50%, 50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("/genshin/assets/img/header__musicPause.png") center/cover no-repeat;
+}
+
+.header__musicShow{
+    width: 35px;
+    height: 33px;
+    transform: translate(50%, 50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("/genshin/assets/img/header__musicPlay.png") center/cover no-repeat;
+    visibility: hidden;
+}
+
+.header__logo img {
+    height: 66px;
+    width: 100%;
+}
+
+.nav{
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    left: 25%;
+}
+
+.nav > li{
+    line-height: 60px;
+    margin: 0 15px;
+    position: relative;
+    border-top: 6px rgba(0,0,0,0) solid;
+}
+/* end fix */
+
+.nav >li:hover {
+    border-top: 6px #69e0ff solid;
+}
+
+.nav .border__original {
+    border-top: 6px #69e0ff solid;
+}
+
+.nav .subnav {
+    position: absolute;
+    background-color: #010101;
+    color: #fff;
+    min-width: 200px;
+    left: 0;
+    top: 100%;
+    list-style-type: none;
+    display: none;
+}
+
+.nav li:hover .subnav {
+    display: block;
+}
+
+.nav .subnav li:hover {
+    background-color: #272626;
+    color: #fff;
+}
+
+.nav .subnav li{
+    display: block;
+}
+
+.subnav > li {
+    padding-left: 15px;
+}
+
+.nav .subnav a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.nav li a{
+    color: #bbb9ba;
+    text-decoration: none;
+}
+
+.nav >li > .home__original {
+    color: #fff;
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+}
+
+.nav > li:hover > a{
+    color: #fff;
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+}
+
+.header__nav .nav__arrow-down {
+    margin-left: 5px;
+}
+
+.nav__right{
+    list-style-type: none;
+}
+
+.nav__right li {
+    display: inline-block;
+    line-height: 66px;
+    padding: 0 15px;
+}
+
+.nav__right li a {
+    color: #bbb9ba;
+    text-decoration: none;
+}
+.nav__right > li:hover >a {
+    color: #fff;
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+}
+
+.nav__right .navr__user{
+    margin-left: 5px;
+}
+.nav__right .header__download{
+    padding: 0 50px;
+    background-color:#ffcf0d;
+}
+
+.nav__right > .header__download > a {
+    color: #534328;
+}
+
+/* slider */
+#slider{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.slider__video {
+    width: 100%;
+    height: 100%;
+}
+
+.slider__content {
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    bottom: 150px;
+    text-shadow: 0 0 10px rgba(114,71,21,0.68), 0 0 10px rgba(114,71,21,0.68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider__content .button__video{
+    background: url(/genshin/assets/img/slider_play.png) no-repeat center;
+    width: 400px;
+    height: 100px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.button__video .button_play{
+    top: 26%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    border: 0px;
+    margin-left: 175px;
+    cursor: pointer;
+    background: none;
+}
+
+
+.button__video .ic__play{
+    font-size: 50px;
+    background: #fff;
+    /* background-color: #333; */
+    border-radius: 50%;
+    transition: color 2s linear;
+}
+.fas.fa-play-circle.ic__play {
+    background: none;
+    color: white;
+}
+.fas.fa-play.ic__play{
+    background: none;
+    font-size: 24px;
+    color: white;
+    display: none;
+}
+
+.button__video .button_play:hover .fas.fa-play-circle.ic__play{
+    display: none;
+}
+.button__video .button_play:hover .fas.fa-play.ic__play{
+    display: block;
+}
+
+.items__img--list {
+    display: flex;
+    list-style-type: none;
+}
+
+.items__img {
+    margin-top: 30px;
+}
+
+.items__img--list li {
+    opacity: 0.8;
+    padding: 0 10px;
+}
+
+.items__img--list li:hover {
+    opacity: 1;
+}
+
+#news{
+    width: auto;
+    height: 810px;
+    color: #fff;
+    position: relative;
+}
+
+#news img {
+    width: 100%;
+    height: 100%;
+}
+
+.news__items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.news__items .new__h3 {
+    font-weight: 300;
+    text-align: center;
+    font-size: 50px;
+    margin: 100px 0 60px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.new__h3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url("/genshin/assets/img/line_left.png") no-repeat center/cover;
+    width: 385px;
+    height: 14px;
+    transform: translateX(-125%);
+}
+
+.new__h3::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    background: url("/genshin/assets/img/line_left.png") no-repeat center/cover;
+    width: 385px;
+    height: 14px;
+    transform: translateX(125%) rotateY(180deg);
+}
+
+.news__main{
+    display: flex;
+    height: 400px;
+    justify-content: center;
+}
+
+.news__img{
+    width: 100%;
+    max-width: 45%;
+    cursor: pointer;
+    position: relative;
+    /* animation-name: news__img;
+    animation-duration: 25s;
+    animation-iteration-count: infinite; */
+
+}
+
+.news__imgSlide{
+    height: 100%;
+}
+
+.news__imgSlide img{
+    width: 100%;
+    height: 100%;
+}
+
+.news__imgSlide.hidden{
+    display: none;
+}
+
+.news__imgListdot{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+}
+
+.news__imgListdot i{
+    /* padding: 2.5px; */
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+    transition: color linear 0.25s;
+}
+
+.news__imgListdot i:hover{
+    color: #fff;
+    border: none;
+    font-size: 24px;
+}
+
+.news__imgListdot .fas.fa-circle.active{
+    color: #fff;
+    border: none;
+    font-size: 24px;
+}
+
+/* @keyframes news__img {
+    0% {background: url("/genshin/assets/img/news1.jpg") no-repeat center/cover;}
+    25% {background: url("/genshin/assets/img/news2.jpg") no-repeat center/cover;}
+    50% {background: url("/genshin/assets/img/news3.jpg")no-repeat center/cover;}
+    75% {background: url("/genshin/assets/img/news4.jpg") no-repeat center/cover;}
+    100% {background: url("/genshin/assets/img/news1.jpg") no-repeat center/cover ;}
+} */
+
+.news__content {
+    width: 45%;
+    background-color: rgba(38,18,12,0.62);
+}
+
+.news__title {
+    margin: 35px 24px 0px;
+    list-style-type: none;
+}
+
+.news__title li {
+    padding: 0px 0px 12px;
+    border-bottom: rgba(255,255,255,0.08) solid 2px ;
+}
+
+.news__title a {
+    color: #ffd481;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 20px 11px;
+    border-bottom: 3px solid #ffd481;
+}
+
+.news__list {
+    margin: 0px 24px 0px;
+    list-style-type: none;
+}
+
+.news__list li {
+    padding: 0px 20px 12px;
+    border-bottom: 2px solid rgba(255,255,255,0.08);
+}
+
+.news__list .news__list--item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    height: 36px;
+    line-height: 48px;
+}
+
+.news__list li:hover{
+    background: rgba(255,212,159,0.06);
+}
+
+.news__ellipsis {
+    width: 450px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.news__date {
+    color: rgba(255,255,255,0.35);
+    font-size: 14px;
+}
+
+.news__content .news__more {
+    color: rgba(255,255,255,0.75);
+    font-size: 18px;
+    line-height: 70px;
+    padding-right: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.news__content .news__more .icon__more {
+    color: rgba(255,212,159,0.75);
+    margin-right: 15px;
+    padding: 2.5px;
+    border: 1px solid rgba(255,212,159,0.75);;
+}
+
+.news__content .news__more:hover{
+    color: rgba(255,212,159,0.75);
+}
+
+.news__content .news__more:hover i{
+    border: 1px solid rgba(255,212,159,0.75);
+    background-color: #514137;
+}
+
+#city {
+    width: 100%;
+}
+
+.city__list {
+    color: #000;
+    list-style-type: none;
+}
+
+.city__list-item {
+    height: 260px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.city__list .items__hover:hover .city__list-bg {
+    transform: scale(1.1);
+} 
+.city__list .city__border {
+    display: flex;
+}
+.city__list .city__border:hover {
+    border: solid #fff 7px;
+}
+
+.city__list-bg {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    position: absolute;
+    z-index: 2;
+    transition: all 0.5s 0s ease-in;
+}
+
+.city__list-Overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.city__list .items__hover:hover .city__list-Overlay{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* change */
+.city__bg-star{
+    position: absolute;
+    z-index: 3;
+    background: url("/genshin/assets/img/home__city-star.png") center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.city__list-item img{
+    height: 246px;
+    /* min-width: 600px; */
+    right: 200px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+.city__list-item:hover img{
+    position: absolute;
+    z-index: 3;
+    display: block;
+    transform: scale(2.5) translateY(25px);
+}
+
+.city__list-item a {
+    text-decoration: none;
+}
+
+.city__list-item p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 3;
+    color: #fff;
+    font-size: 36px;
+}
+
+.city__list-item:hover p::after{
+    opacity: 1;
+}
+
+.city__list-item .city__items-textShow::after{
+    content: "";
+    width: 280px;
+    height: 12px;
+    opacity: 0;
+    background: url("/genshin/assets/img/home__city-line.png") center/cover no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 120%;
+    transform: translateX(-50%);
+}
+
+.reloadcity p {
+    line-height: 260px;
+    text-align: center;
+    color: #58595c;
+    font-size: 50px;
+    user-select: none;
+}
+
+#footer{
+    position: relative;
+    width: 100%;
+    background-color: #111;
+}
+
+.footer__top{
+    height: 52px;
+    line-height: 52px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__icons {
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+.footer__icons .list__icons {
+    list-style-type: none;
+    display: flex;
+}
+
+.list__icons li{
+    padding: 0 16px;
+}
+
+.list__icons li:hover a{
+    color: #fff;
+}
+
+.list__icons a{
+    text-decoration: none;
+    color: #999;
+}
+
+.list__icons p{
+    display: none;
+}
+
+.icon-wrap__right{
+    display: none;
+}
+
+.footer__languages{
+    font-size: 30px;
+    margin-right: 40px;
+}
+.languages__block {
+    display: flex;
+    list-style-type: none;
+}
+.languages__block li{
+    padding: 0 12px;
+    position: relative;
+}
+
+.languages__block a{
+    text-decoration: none;
+    color: #999;
+}
+
+.languages__block li p{
+    font-size: 18px;
+    user-select: none;
+}
+
+.languages__block > li > .footer__ic-arrow {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.footer__languages-wrap {
+    display: none;
+}
+
+.footer__languages .list__languages {
+    position: absolute;
+    z-index: 5;
+    width: 500px;
+    height: 160px;
+    right: 0px;
+    top: -160px;
+    font-size: 18px;
+    background: #222;
+    color: #999;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    user-select: none;
+}
+
+.footer__languages li {
+    padding: auto;
+}
+
+.list__languages li:hover a {
+    color: #fff;
+}
+
+.footer__main {
+    background-color: #111;
+    padding: 40px 0px;
+}
+
+.footer__wrap {
+    margin: 0 auto;
+    color: #999;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+}
+
+.footer__content-logo , .footer__content-info{
+    width: 45%;
+}
+
+.footer__content-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+}
+
+.footer__content-logo .img__logo , .footer__content-logo .img__game {
+    padding: 0 20px;
+}
+
+.footer__content-logo .img__logo {
+    border-right: #fff solid 1px;
+}
+
+.footer__content-info {
+    margin-right: 10%;
+}
+
+.footer__content-info .text {
+    padding: 10px 0px;
+
+}
+
+.footer__content-info .links a{
+    text-decoration: none;
+    color: #999;
+    border-left: #fff solid 1px;
+    padding: 2px 10px 0px;
+}
+
+.footer__content-info .links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer__content-info .coppy__right {
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer__content-info .extra__info {
+    font-size: 14px;
+}
+
+/* creative overlay */
+.modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* sd để ẩn modal đi */
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal__container {
+    background-color: #fff;
+    width: 800px;
+    max-width: calc(100% - 32px); /* khi thu nho man duoi 800px se co khoang cach 2 ben la 32px ~~ responsive*/
+    min-height: 300px;
+    animation: modalFadeIn ease 0.5s ;
+}
+
+.modal__header {
+    background-color: #000;
+    opacity: 0.3;
+    height: 70px;
+    width: auto;
+    text-align: center;
+}
+
+.modal__header img {
+    height: 100%;
+}
+
+.modal__close {
+    font-size: 24px;
+    float: right;
+}
+
+.modal__close:hover .modal__close-ic {
+    background-color: red;
+    color: #fff;
+}
+
+.modal__close-ic {
+    padding: 10px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.modal__body {
+    padding: 10px;
+    margin: 0 24px;
+}
+
+.modal__label , .modal__login{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.modal__input-user , .modal__input-pass {
+    width: 100%;
+    border: 1px #ccc solid;
+    padding: 10px;
+    margin-bottom: 22px;
+}
+
+.modal__login {
+    width: 100%;
+    padding: 10px;
+    font-size: 22px;
+    background-color: #3b4354;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.modal__login:hover {
+    opacity: 0.8;
+}
+
+.modal__footer {
+    margin: 0 34px;
+}
+
+.modal__footer-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: -10px;
+}
+
+
+.modal__footer-head a {
+    text-decoration: none;
+    color: #000;
+}
+
+.modal__footer-head a:hover{
+    opacity: 0.3;
+}
+
+.modal__footer-subhead {
+    text-align: center;
+    opacity: 0.3;
+}
+
+.modal__footer-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin: 12px auto;
+}
+
+.modal__footer-icon img {
+    width: 100%;
+    height: 100%;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.modal__footer-icon img:hover {
+    opacity : 0.8;
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* responsive */
+/* header responsive */
+.header-nav__menu{
+    display: none;
+}
+
+.header-nav__menu-mobi{
+    display: none;
+}
+
+.nav__close{
+    display: none;
+}
+/* update header fix*/
+.nav.block{
+    display: block;
+}
+
+/* header mobile scroll */
+.header__menu-mobile-js.hidden{
+    display: none;
+}
+
+#header.block{
+    display: flex;
+}
+
+/* respon slider */
+.slider__poster{
+    display: none;
+}
+
+/* news respon */
+.new__more-tablet-mobile{
+    display: none;
+}
+
+/* footer respon */
+/* add footer title */
+.list__icons .footer__title{
+    font-weight: 300;
+    text-align: center;
+    font-size: 50px;
+    margin: 30px 0 20px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: none;
+}
+
+.footer__title::before{
+    content: "";
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    background: url("/genshin/assets/img/line_left.png") no-repeat center/cover;
+    width: 385px;
+    height: 14px;
+    transform: translateX(-125%);
+}
+
+.footer__title::after{
+    content: "";
+    position: absolute;
+    top: 37%;
+    right: 50%;
+    background: url("/genshin/assets/img/line_left.png") no-repeat center/cover;
+    width: 385px;
+    height: 14px;
+    transform: translateX(125%) rotateY(180deg);
+}

@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/character.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/responsive/respon-character.css">
+    <title>Nhân Vật</title>
+</head>
+<body>
+    <div id="main" class="js-main">
+        <!-- header -->
+        <div id="header">
+            <div class="header__left">
+                <div class="header__logo">
+                    <div class="header__musicShow">
+                        <audio src="./assets/audio/ThemeMusic.mp3"></audio>
+                    </div>
+                    <div class="header__musicHide"></div>
+                    <img src="./assets/img/Logogs.png" alt="logo">
+                </div>
+                <div class="header__nav">
+                    <!-- add menu tablet mobile -->
+                    <div class="header-nav__menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <!-- end menu tablet-mobile -->
+                    <ul class="nav">
+                        <!-- close tablet mobile -->
+                        <li class="nav__close"><a href="#">
+                            <i class="fas fa-times"></i>
+                        </a></li>
+                        <!-- end close tablet-mobile -->
+                        <li><a href="./home.html">Trang Chủ</a></li>
+                        <li><a href="./news.html">Tin Tức</a></li>
+                        <li class="border__original "><a href="./character.html">Nhân Vật</a></li>
+                        <li><a>Tư Liệu
+                            <i class="nav__arrow-down fas fa-caret-down"></i>
+                        </a>
+                            <ul class="subnav">
+                                <li><a href="./reviewgame.html">Giới Thiệu Game</a></li>
+                                <li><a href="./world.html">Thế Giới</a></li>
+                                <li><a href="./town.html">Tạp Chí</a></li>
+                                <li><a href="./comic.html">Truyện Tranh</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Khác
+                            <i class="nav__arrow-down fas fa-caret-down"></i>
+                        </a>
+                            <ul class="subnav">
+                                <li><a href="">HoYoLAB</a></li>
+                                <li><a href="">Trung Tâm Nạp</a></li>
+                                <li><a href="">Mã Quà</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__right">
+                <ul class="nav__right">
+                    <li class="js-login"><a class="pointer">Đăng Nhập
+                        <i class="navr__user fas fa-user"></i>
+                    </a></li>
+                    <li class="header__download"><a href="">Tải Game</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- content box -->
+        <div class="char__wrap">
+            <!-- btn open sidebar -->
+            <div class="sidebar">
+                <!-- btn click city (mobile- tablet) -->
+                <div class="sidebar__btn-click">Mondstadt</div>
+                <ul class="list__sidebar">
+                    <li class="list__bgsidebar bgmain__link bgshow" onclick="openSlider(event,'main__mondstadt','jean') ; chooseCity(0)"><a>Mondstadt</a></li>
+                    <li class="list__bgsidebar bgmain__link " onclick="openSlider(event,'main__liyue','xiao') ; chooseCity(1)" ><a>Liyue</a></li>
+                    <li class="list__bgsidebar bgmain__link " onclick="openSlider(event,'main__inazuma','ayaka') ; chooseCity(2)"><a>Inazuma</a></li>
+                    <li class="list__bgsidebar bgmain__reload"><a>Vui Lòng Đợi</a></li>
+                </ul>
+                <span class="hidden__modal"></span>
+            </div>
+        </div>
+
+        <div class="layout">
+            <!-- char main -->
+            <!-- mondstadt -->
+            <div class="content__charwrap" id="main__mondstadt">
+                <div class="bg__wrap-mondstadt" style="background-image: url(/genshin/assets/img/char/bg-main1.jpg);"></div>
+                <ul class="charmain_wrap-content">
+                    <!-- jean -->
+                    <li class="content__list-js list__char-mond" id="jean"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Jean gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">JEAN</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: SAITO Chiwa</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('jean-voiceshow'); playPause('jean-audio')">
+                                    <div class="cv__micro-open" id="jean-voiceshow">
+                                        <audio class="audio-open" id="jean-audio" src="./assets/img/char/Figure/music mond/jean.mp3" ></audio>
+                                    </div>
+                                </div>
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Là quyền đội trưởng của Đội Kỵ Sĩ Tây Phong , Jean luôn cần mẫn làm việc, đem lại sự yên bình cho người dân.
+                                    </p>
+                                    <p>Tuy rằng không có tài năng thiên phú vượt bậc, nhưng nhờ chăm chỉ luyện tập, hiện nay cô ấy không thua kém ai.</p>
+                                    <p>Sự uy hiếp của Phong Ma Long ngày càng đến gần vị quyền đội trưởng đáng tin tưởng này đã có sự chuẩn bị, thề
+                                        phải bảo vệ Mondstadt
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- amber -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="amber"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/amber gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">AMBER</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: IWAMI Manaka</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('amber-voiceshow'); playPause('amber-audio')">
+                                    <div class="cv__micro-open" id="amber-voiceshow">
+                                        <audio class="audio-open" id="amber-audio" src="./assets/img/char/Figure/music mond/amber.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Thiếu nữ hoạt bát thắng thắn, là kỵ sĩ trinh thám duy nhất trong thành Mondstadt
+                                    </p>
+                                    <p>Amber yêu thích dùng cánh bay, liên tiếp ba năm dành được giải "Quán Quân Bay Lượn" của thành Mondstadt</p>
+                                    <p>Là một ngôi sao mới của Đội Kỵ Sĩ Tây Phong, ngày hôm nay Amber vẫn là người sô nổi nhất.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- lisa -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="lisa"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/lisa gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">LISA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: TANAKA Rie</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('Lisa-voiceshow'); playPause('Lisa-audio')" >
+                                    <div class="cv__micro-open" id="Lisa-voiceshow">
+                                        <audio class="audio-open" id="Lisa-audio" src="./assets/img/char/Figure/music mond/lisa.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>LÀ một ma nữ thông minh thích ngủ.
+                                    </p>
+                                    <p>Đảm nhiệm công việc quản lý thư viện của Đội Kỵ Sĩ Tây Phong, Lisa thường dùng cách hiệu quả nhất để giải quyết vấn đề gặp phải.</p>
+                                    <p>Tuy rằng trông có vẻ lười biếng, nhưng cô gái trầm ổn ấy dường như đã nắm vững mọi thứ.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- keaya -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="kaeya"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/kaeya gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">KEAYA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: TORIUMI Kohsuke</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('keaya-voiceshow'); playPause('kaeya-audio')" >
+                                    <div class="cv__micro-open" id="keaya-voiceshow">
+                                        <audio class="audio-open" id="kaeya-audio" src="./assets/img/char/Figure/music mond/kaeya.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Trong Đội Kỵ Sĩ Tây Phong, Kaeya là đội phó được tin tưởng nhất. Chỉ cần giao nhiệm vụ cho hắn thì chắc chắn sẽ được giải quyết.
+                                    </p>
+                                    <p>Trong thành Mondstadt, con người hài hước thú vị như hắn cũng rất được yêu thích, nhưng gã Kỵ Sĩ này dường như có một bí mật không để người khác biết.</p>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- barbara -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="barbara"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/barbara gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">BARBARA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: KITO Akari</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('barbara-voiceshow'); playPause('barbara-audio')" >
+                                    <div class="cv__micro-open" id="barbara-voiceshow">
+                                        <audio class="audio-open" id="barbara-audio" src="./assets/img/char/Figure/music mond/barbara.mp3"></audio>
+                                    </div>
+                                </div>
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Là mục sư tế lễ của Giáo Hội Tây Phong, cũng là thần tượng tỏa sáng của Mondstadt.
+                                    </p>
+                                    <p>Đối với thành phố Mondstadt nơi đã quen với truyền thống nhà thơ lang thang."Thần Tượng" vẫn là một thứ khá mới mẻ . Nhưng ở Mondstadt mọi người đều yêu mến Barbara</p>
+                                    <p>Đây chính là tinh thần tự do của thành phố tự do - Tình yêu mà mọi người dành cho Barbara khiến cô ấy rất cảm động.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Diluc -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="diluc"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/diluc gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">DILUC</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: ONO Kenshou</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('Diluc-voiceshow'); playPause('diluc-audio')" >
+                                    <div class="cv__micro-open" id="Diluc-voiceshow">
+                                        <audio class="audio-open" id="diluc-audio" src="./assets/img/char/Figure/music mond/diluc.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p> Là đại gia giàu nhấu Mondstadt, Diluc thường để lại ấn tượng cho người khác là một quý công tử hoàn mỹ phong độ đường đường.
+                                    </p>
+                                    <p>Nhưng bộ mặt thật của hắn, là một chiến sĩ với niềm tin kiên định, ý chí "Bất chấp mọi giá bảo vệ Mondstadt" của hẳn hừng hực như lửa đốt, khiến hắn có thể dùng khí thế mạnh mẽ, không chút do dự để đánh lui kẻ địch.</p>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Razor -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="razor"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Razor gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">RAZOR</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: UCHIYAMA Kouki</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('razor-voiceshow'); playPause('razor-audio')" >
+                                    <div class="cv__micro-open" id="razor-voiceshow">
+                                        <audio class="audio-open" id="razor-audio" src="./assets/img/char/Figure/music mond/razor.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Trong những lời đồn của thành Mondstadt, có người nói hắn là một cô nhi được sói nuôi dưỡng, có người nói hắn là hóa thân của linh hồn sói...
+                                    </p>
+                                    <p>Móng vuốt vung lên như sấm sét, sói sẽ luôn làm bạn với miền hoang dã.</p>
+                                    <p>Cho đến nay, thiếu niên sói vẫn dựa vào trực giác của loài dã thú, cùng săn bán với đàn sói trong rừng sâu.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Venti -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="venti"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Venti gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">VENTI</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: MURUSE Ayumu</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('venti-voiceshow'); playPause('venti-audio')" >
+                                    <div class="cv__micro-open" id="venti-voiceshow">
+                                        <audio class="audio-open" id="venti-audio" src="./assets/img/char/Figure/music mond/venti.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Nhà thơ có lai lịch không rõ ràng, có lúc cất lên những lời thơ cũ kĩ, có khi lại hát những bài hát của ai từng nghe.
+                                    </p>
+                                    <p>Thích táo và không khí náo nhiệt, ghét phô mai cùng những thứ dính dính.</p>
+                                    <p>Khi dẫn dắt nguyên tố "Phong", nguyên tố thường có hình dạng lông vũ, bởi cậu ấy thích nhìn những thứ bay nhẹ nhàng.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- klee -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="klee"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Klee gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">KLEE</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: KUNO Misaki</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('klee-voiceshow'); playPause('klee-audio')" >
+                                    <div class="cv__micro-open" id="klee-voiceshow">
+                                        <audio class="audio-open" id="klee-audio" src="./assets/img/char/Figure/music mond/klee.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Đội Kỵ Sĩ Tây Phong, Kỵ Sĩ Tia Lửa! luôn song hành cùng với ánh sáng và bùng nổ!
+                                    </p>
+                                    <p>---- Sau đó dần biến mất dưới ánh mắt đầy nghiêm khắc của đội trưởng Jean.</p>
+                                    <p>Tuy rằng những công thức thuốc nổ mới, phần lớn là được phát minh ra trong thời gian bị giam giữ...
+                                    </p>
+                                    <p>Thế nhưng nếu không bị giam cầm, thì tốt biết mấy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- bennett -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="bennett"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Bennett gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">BENNETT</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: OUSAKA Ryouta</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('bennett-voiceshow'); playPause('bennett-audio')" >
+                                    <div class="cv__micro-open" id="bennett-voiceshow">
+                                        <audio class="audio-open" id="bennett-audio" src="./assets/img/char/Figure/music mond/bennett.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Hiệp Hội Nhà Mạo Hiểm thành Mondstadt có số ít những Nhà Mạo Hiển trẻ tuổi, luôn bị "bất hạnh" quấn lấy.
+                                    </p>
+                                    <p>Đoàn mạo hiểm Benny mà anh thành lập, dưới ánh hưởng của sự "bất hạnh" liên tục có thành viên xin nghỉ.
+                                        Hiện tai, trong đội chỉ còn sót lại một mình anh và đang trên bờ vực giải thể.
+                                    </p>
+                                    <p>Nhưng dưới sự thỉnh cầu chân thành của Bennett, tiểu thư Catherine của Hiệp Hội Nhà Mạo Hiểm thành Mondstadt đã giữ
+                                        lại biên chế "Đoàn mạo hiểm Benny", đồng thời che giáu anh việc các thành viên khác đã "nhảy việc".
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Noelle -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="noelle"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Noelle gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">NOELLE</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: TAKAO Kanon</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('noelle-voiceshow'); playPause('noelle-audio')" >
+                                    <div class="cv__micro-open" id="noelle-voiceshow">
+                                        <audio class="audio-open" id="noelle-audio" src="./assets/img/char/Figure/music mond/noelle.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Giống với đa số thanh niên thành Mondstadt khác, ước mơ của Noelle là trở thành một Kỵ Sĩ Tây Phong lẫy lừng.
+                                    </p>
+                                    <p>Cho dù chưa phải là một kỵ Sĩ, nhưng cô ấy vẫn làm việc tại đội Kỵ Sĩ với thân phận hầu gái, luôn nỗ lực trong học tập phong thái của kỵ sĩ.</p>
+                                    <p>Cô ấy luôn tin rằng chỉ cần cố gắng hết sức, sẽ có một ngày được khoắc lên bộ đồng phục tượng trưng cho sự vinh dự ấy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- fischl -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="fischl"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Fischl gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">FISCHL</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: UCHIDA Maaya</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('fischl-voiceshow'); playPause('fischl-audio')" >
+                                    <div class="cv__micro-open" id="fischl-voiceshow">
+                                        <audio class="audio-open" id="fischl-audio" src="./assets/img/char/Figure/music mond/fischl.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Tự xưng là [Công Chúa Định Tội], thiếu nữ thần bí đồng hành cùng chú quạ đen tên Oz.
+                                    </p>
+                                    <p>Hiện nay đang công tác tại Hiệp Hội Nhà Mạo Hiểm với chức vụ điều tra viên.</p>
+                                    <p>Với khả năng đặc biệt cộng thêm cá tính tuyệt vời, còn có sự nỗ lực mà bản thân không muốn thừa nhận, Fischl đã trở
+                                        thành một ngôi sao mới trong số các điều tra viên của Hiệp Hội Nhà Mạo Hiểm và giành được sự công nhận của mọi người.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Sucrose -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="sucrose"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Sucrose gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">SUCROSE</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: FUJITA Akane</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('sucrose-voiceshow'); playPause('sucrose-audio')" >
+                                    <div class="cv__micro-open" id="sucrose-voiceshow">
+                                        <audio class="audio-open" id="sucrose-audio" src="./assets/img/char/Figure/music mond/sucrose.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Giả Kim Thuật Sĩ có sự hiếu kỳ với mọi thứ của thế gian này thuộc Đội Kỵ Sĩ Tây Phong, là trợ thủ của Albedo.
+                                        Hướng nghiên cứu là "Giả Kim Sinh Vật".
+                                    </p>
+                                    <p>Cô ấy mong muốn dùng thuật Giả Kim để cải tạo hình thái sinh mệnh, khiến cho thế giới này trở nên phong phú hơn .</p>
+                                    <p>Tuy rằng trong quá trình cải tạo sẽ thỉnh thoảng xuất hiện một số sản phẩm hơi kỳ dị, nhưng nhìn chung mà nói, Sucrose
+                                        rất xuất sắc trong lĩnh vực giả kim sinh vật.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Mona -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="mona"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Mona gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">MONA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: KOHARA Konomi</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('Mona-voiceshow'); playPause('Mona-audio')" >
+                                    <div class="cv__micro-open" id="Mona-voiceshow">
+                                        <audio class="audio-open" id="Mona-audio" src="./assets/img/char/Figure/music mond/mona.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Thuật sĩ thần bí, tự xưng là nhà chiêm tinh vĩ đại, có thực lực bất phàm, thông minh cao ngạo.
+                                    </p>
+                                    <p>Dù sống cuộc sống cơ cực, nghèo khổ nhưng cô ấy nhất quyết không dùng bói toán để trục lợi... Chính sự
+                                        kiên trì này khiến Mona luôn trăn trở việc mưu sinh.
+                                    </p>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Diona -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="diona"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Diona gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">DIONA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: IZAWA Shiori</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('Diona-voiceshow'); playPause('Diona-audio')" >
+                                    <div class="cv__micro-open" id="Diona-voiceshow">
+                                        <audio class="audio-open" id="Diona-audio" src="./assets/img/char/Figure/music mond/diona.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Người pha chế rượu được yêu thích của Quán Rượu Đuôi Mèo, là ngôi sao mới trong ngành rượu của Mondstadt,
+                                        kẻ thách thức lớn nhất đổi với thế lực truyền thông.
+                                    </p>
+                                    <p>Cô gái có tai và đuôi mèo sinh ra ở Thanh Tuyền Trấn, chỉ cần là rượu do chính tay Diona pha chế, đều sẽ biến thành
+                                        loại rượu ngon không thể tưởng tượng nổi.
+                                    </p>
+                                    <p>Tuy nhiên đối với người cực kỳ ghét rượu như cô ấy, thì đây rốt cuộc là "chúc phúc" hay "lời nguyền" nhỉ.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Albedo -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="albedo"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Albedo gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">ALBEDO</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: NOJIMA Kenji</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('albedo-voiceshow'); playPause('albedo-audio')" >
+                                    <div class="cv__micro-open" id="albedo-voiceshow">
+                                        <audio class="audio-open" id="albedo-audio" src="./assets/img/char/Figure/music mond/albedo.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Albedo - Giả Kim Thuật Sĩ hiện đang sống ở Mondstadt và làm việc tại Đội Kỵ Sĩ Tây Phong.
+                                    </p>
+                                    <p>"Thiên tài","Kreideprinz" hay "Đội Trưởng Điều Tra" ... Anh ấy không quan tâm đến chức tước và danh vọng, chỉ tập
+                                        trung vào các đề tài nghiên cứu.
+                                    </p>
+                                    <p>Giàu có và các mối quan hệ không phải là mục tiêu mà anh ấy theo đuổi. Điều mà anh ấy khao khát chính là nắm bắt
+                                        những kiến thức cao siêu ẩn sâu trong tâm trí con người từ ngàn xưa đến nay.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Rosaria -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="rosaria"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Rosaria gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">ROSARIA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: KAKUMA Ai</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('rosaria-voiceshow'); playPause('rosaria-audio')" >
+                                    <div class="cv__micro-open" id="rosaria-voiceshow">
+                                        <audio class="audio-open" id="rosaria-audio" src="./assets/img/char/Figure/music mond/rosaria.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Rosaria - Tu nữ thuộc giáo hội Tây phong thành Mondstadt.
+                                    </p>
+                                    <p>Một tu nữ kỳ quái ngoại trừ cách ăn mặc thì không có điểm nào giống với người trong tu viện. Một cô gái lãnh đạm sắc sảo.</p>
+                                    <p>Hành tung khó lường, thường đi mà không báo trước. Gánh vác sứ mệnh nào đó nhưng mọi người dường như không thể hiểu nổi 
+                                        rốt cuộc cô đại diện cho thứ gì...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Eula -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="eula"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Eula gs.png" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">EULA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: SATO Rina</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('eula-voiceshow'); playPause('eula-audio')" >
+                                    <div class="cv__micro-open" id="eula-voiceshow">
+                                        <audio class="audio-open" id="eula-audio" src="./assets/img/char/Figure/music mond/eula.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Eula - "Kỵ Sĩ Sóng Nước" hậu duệ của quý tộc cũ quanh năm chiến đấu bên ngoài.
+                                    </p>
+                                    <p>Sinh ra trong tầng lập quý tộc cũ, mang trong mình huyết mạch tội nhân, quả thực cần những kỹ năng sống đặc biệt 
+                                        mới có thể thản nhiên bước đi dưới bức tường định kiến cao chót vót. Đương nhiên điều này không ảnh hưởng tới việc 
+                                        cô đoạn tuyệt gia tộc, trở thành Kỵ Sĩ Sóng Nước xuất sắc, săn lùng kẻ địch ở bên ngoài Mondstadt, hoafnthanhf cuộc 
+                                        "trả thù" có một không hai của mình.
+                                    </p>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Aloy -->
+                    <li class="list__char-hidden content__list-js list__char-mond" id="aloy"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/Figure/Aloy gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">ALOY</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: TAKAGAKI Ayahi</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('aloy-voiceshow'); playPause('Aloy-audio')" >
+                                    <div class="cv__micro-open" id="aloy-voiceshow">
+                                        <audio class="audio-open" id="Aloy-audio" src="./assets/img/char/Figure/music mond/aloy.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Thợ săn nhạy bén từ bộ tộc Nora. Sẵn sàng giương cung vì lẽ phải.
+                                    </p>
+                                    <p></p>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                </ul>
+                <!-- char page monstadt-->
+                <div class="char__page">
+                    <div class="char__listwrap">
+                        <ul class="list__char-slide">
+                            <!-- jean -->
+                            <li class="tablink__list-js avachar__mond active" id="jean" onclick="openinfoChar(event, 'jean');currentSlide(1)"><a>
+                                <img src="./assets/img/char/Figure/ava jean.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Jean</p>
+                            </a></li>
+                            <!-- amber -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'amber');currentSlide(2)"><a>
+                                <img src="./assets/img/char/Figure/ava amber .jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Amber</p>
+                            </a></li>
+                            <!-- lisa -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'lisa');currentSlide(3)"><a>
+                                <img src="./assets/img/char/Figure/ava lisa.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Lisa</p>
+                            </a></li>
+                            <!-- kaeya -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'kaeya');currentSlide(4)"><a>
+                                <img src="./assets/img/char/Figure/ava keaya.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">keaya</p>
+                            </a></li>
+                            <!-- barbara -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'barbara');currentSlide(5)"><a>
+                                <img src="./assets/img/char/Figure/ava barbara.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Barbara</p>
+                            </a></li>
+                            <!-- Diluc -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'diluc');currentSlide(6)"><a>
+                                <img src="./assets/img/char/Figure/ava diluc.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Diluc</p>
+                            </a></li>
+                            <!-- razor -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'razor');currentSlide(7)"><a>
+                                <img src="./assets/img/char/Figure/ava razor.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Razor</p>
+                            </a></li>
+                            <!-- venti -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'venti');currentSlide(8)"><a>
+                                <img src="./assets/img/char/Figure/ava venti.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Venti</p>
+                            </a></li>
+                            <!-- klee -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'klee');currentSlide(9)"><a>
+                                <img src="./assets/img/char/Figure/ava klee.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Klee</p>
+                            </a></li>
+                            <!-- Bennett -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'bennett');currentSlide(10)"><a>
+                                <img src="./assets/img/char/Figure/ava bennett .jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Bennett</p>
+                            </a></li>
+                            <!-- noele -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'noelle');currentSlide(11)"><a>
+                                <img src="./assets/img/char/Figure/ava noelle.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Noelle</p>
+                            </a></li>
+                            <!-- Fischl -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'fischl');currentSlide(12)"><a>
+                                <img src="./assets/img/char/Figure/ava Fischl.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Fischl</p>
+                            </a></li>
+                            <!-- Sucrose -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'sucrose');currentSlide(13)"><a>
+                                <img src="./assets/img/char/Figure/ava sucrose.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Sucrose</p>
+                            </a></li>
+                            <!-- mona -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'mona');currentSlide(14)"><a>
+                                <img src="./assets/img/char/Figure/ava mona.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Mona</p>
+                            </a></li>
+                            <!-- Diona -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'diona');currentSlide(15)"><a>
+                                <img src="./assets/img/char/Figure/ava diona.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Diona</p>
+                            </a></li>
+                            <!-- Albedo -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'albedo');currentSlide(16)"><a>
+                                <img src="./assets/img/char/Figure/ava albedo.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Albedo</p>
+                            </a></li>
+                            <!-- Rosaria -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'rosaria');currentSlide(17)"><a>
+                                <img src="./assets/img/char/Figure/ava rosaria.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Rosaria</p>
+                            </a></li>
+                            <!-- Eula -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'eula');currentSlide(18)"><a>
+                                <img src="./assets/img/char/Figure/ava eula.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Eula</p>
+                            </a></li>
+                            <!-- Aloy -->
+                            <li class="tablink__list-js avachar__mond" onclick="openinfoChar(event, 'aloy');currentSlide(19)"><a>
+                                <img src="./assets/img/char/Figure/ava aloy.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Aloy</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="btn__pre" onclick="plusSlides(-1)"></div>
+                    <div class="btn__next" onclick="plusSlides(1)"></div>
+                </div>
+            </div>
+            <!-- End mondstadt -->
+
+            <!-- Liyue -->
+            <div class="content__charwrap" style="display:none" id="main__liyue">
+                <div class="bg__wrap-liyue" style="background-image: url(/genshin/assets/img/char/bg-main2.jpg);"></div>
+                <ul class="charmain_wrap-content">
+                    <!-- xiao -->
+                    <li class="content__list-js content__list-liyue" id="xiao"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/xiao gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">XIAO</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: MATSUOKA Yoshitsugu</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('xiao-voiceshow'); playPause('xiao-audio')" >
+                                    <div class="cv__micro-open" id="xiao-voiceshow">
+                                        <audio class="audio-open" id="xiao-audio" src="./assets/img/char/figure liyue/music char/xiao.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Một trong "Tam Nhãn Ngũ Hiển Tiên Nhân" bảo vệ cảng Liyue, còn được gọi la "Hộ Pháp Dạ Xoa Đại Tướng".
+                                    </p>
+                                    <p>
+                                        Tuy có vẻ bề ngoài là một thiếu niên trẻ tuổi, thế nhưng những truyền thuyết về anh sớm đã được ghi chép trong các cổ tịch ngàn năm.</p>
+                                    <p>
+                                        Vô cùng yêu thích "Đậu Hũ Hạnh Nhân" của nhà trọ Vọng Thư.
+                                    </p>
+                                    <p>
+                                        Cũng là do mùi vị của "Đậu Hũ Hạnh Nhân" rất giống với giấc mộng đẹp.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- beidou -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="beidou"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/beidou gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">BEIDOU</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: KOSHIMIZU Ami</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('beidou-voiceshow'); playPause('beidou-audio')" >
+                                    <div class="cv__micro-open" id="beidou-voiceshow">
+                                        <audio class="audio-open" id="beidou-audio" src="./assets/img/char/figure liyue/music char/beidou.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Thuyền trưởng "Nam Thập Tự", người có danh vọng khá cao ở Liyue.
+                                    </p>
+                                    <p>Có người nói rằng cô có thể lấp núi dời sông, một vài người khác lại nói cô có thể dương kiếm dẫn sét, lại có người tin rằng quái vật đáng sợ nơi biển sâu cũng chẳng phải là kẻ địch của cô.</p>
+                                    <p>Đối với người ngoài, họ sẽ cho đây là những lời nói nhảm, thế nhưng những ai đã từng sát cánh cùng Beidou đều tin như vậy--
+                                    </p>
+                                    <p>"Nếu thật sự có quái vật biển sâu, Beidou có thể chẻ nó ra làm hai mảnh."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Ningguang -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="ningguang"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/ningguang gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">NINGGUANG</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: OHARA Sayaka</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('ningguang-voiceshow'); playPause('ningguang-audio')" >
+                                    <div class="cv__micro-open" id="ningguang-voiceshow">
+                                        <audio class="audio-open" id="ningguang-audio" src="./assets/img/char/figure liyue/music char/ningguang.mp3"></audio>
+                                    </div>
+                                </div>                              
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Ngồi ở cung điện trên không, có nhiều tin đồn vây quanh, trên khuôn mặt luôn giữ một nụ cười nho nhã thần bí.
+                                    </p>
+                                    <p>Là Thiên Quyền Tinh trong "Thất Tinh Liyue", cô không chỉ tượng trưng cho quyền lực và pháp luật, còn là đại diện của tài phú và trí tuệ.</p>
+                                    <p>Tuy rằng trông có vẻ lười biếng, nhưng cô gái trầm ổn ấy dường như đã nắm vững mọi thứ.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Xiangling -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="xiangling"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/xiangling gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">XIANGLING</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: OZAWA Ari</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('xiangling-voiceshow'); playPause('xiangling-audio')" >
+                                    <div class="cv__micro-open" id="xiangling-voiceshow">
+                                        <audio class="audio-open" id="xiangling-audio" src="./assets/img/char/figure liyue/music char/xiangling.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Vừa là bồi bàn vừa kiêm đầu bếp mới của "Vạn Dân Đường", vô cùng nhiệt huyết với sự nghiệp nấu nướng, đặc biệt là những món tê cay.
+                                    </p>
+                                    <p>Tuổi còn trẻ nhưng kỹ năng nấu nướng tuyệt vời, rất có tiếng tăm trong giới ẩm thực Ngật Hổ Nham.</p>
+                                    <p>Nếu cô ấy có ý mời bạn ăn thử món mới thì hãy yên tâm mà thưởng thức, chắc chắn sẽ không phụ lòng mong mỏi của bạn, thật đó.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Xingqui -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="xingqiu" ><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/xingqiu gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">XINGQIU</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: MINAGAWA Junko</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('xingqui-voiceshow'); playPause('xingqui-audio')" >
+                                    <div class="cv__micro-open" id="xingqui-voiceshow">
+                                        <audio class="audio-open" id="xingqui-audio" src="./assets/img/char/figure liyue/music char/xingqui.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Nhị thiếu gia của Thương Hội Phi Vân ở cảng Liyue, từ nhỏ nổi tiếng là siêng năng ham học, cư xử lễ phép.
+                                    </p>
+                                    <p></p>
+                                    <p>Có điều, ngay cả một thiếu niên nho nhã như vậy mà cũng có thể chạy nhanh như thỏ.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Chongyun -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="chongyun"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/chongyun gs .jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">CHONGYUN</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: SAITO Soma</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('chongyun-voiceshow'); playPause('chongyun-audio')" >
+                                    <div class="cv__micro-open" id="chongyun-voiceshow">
+                                        <audio class="audio-open" id="chongyun-audio" src="./assets/img/char/figure liyue/music char/chonyun.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p> Phương sĩ vân du luôn tìm kiếm và tiêu diệt tà ma xung quanh Liyue. Là người kế thừa của gia tộc trừ yêu nổi tiếng, từ bé anh ấy đã có tuyệt kỹ hơn người. Nhưng mà, tuyệt kỹ này không phải được học từ trường lớp, mà là do thiên phú dị bẩm - [Thuần Dương Chi Thể]
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- qiqi -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="qiqi"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/qiqi gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">QIQI</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: TAMURA YUKARI</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('qiqi-voiceshow'); playPause('qiqi-audio')" >
+                                    <div class="cv__micro-open" id="qiqi-voiceshow">
+                                        <audio class="audio-open" id="qiqi-audio" src="./assets/img/char/figure liyue/music char/qiqi.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Một cô bé hái thuốc kiêm học việc tại Nhà Thuốc Bubu.</p>
+                                    <p>Từng vì "tiên duyên" mà trở thành cương thi, khi hành động cần bản thân tự ra lệnh.
+                                    </p>
+                                    <p>Qiqi có trí nhớ rất kém, để đảm bảo cho cuộc sống hàng ngày suôn sẻ, cô ta luôn mang theo một cuốn sổ, ghi lại các mục lưu ý.</p>
+                                    <p>Nhưng trong những ngày đen đủi nhất, cô ấy thậm chí quên luôn cả "Những mục lưu ý"...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- kequing -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="kequing"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/keqing gs .jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">KEQUING</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: KITAMURA Eri</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('kequing-voiceshow'); playPause('keqing-audio')" >
+                                    <div class="cv__micro-open" id="kequing-voiceshow">
+                                        <audio class="audio-open" id="keqing-audio" src="./assets/img/char/figure liyue/music char/kequing.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Ngọc Hành Tinh là một trong Thất Tinh Liyue, đối với việc "Liyue hoàn toàn được quyết định bởi Đế Quân" có chút không hài lòng... Nhưng trên thực tế, Thần cũng rất coi trọng những người như cô.
+                                    </p>
+                                    <p>Cô ấy luôn tin rằng những việc liên quan đến vận mệnh con người phải do con người quyết định, hơn nữa con người chắc chắn sẽ làm tốt hơn. Để chứng minh điều này, cô ấy phải nỗ lực hơn bất kỳ ai.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Tartaglia -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="tarta"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/tartaglia gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">TARTAGLIA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: KIMURA Ryohei</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('tartaglia-voiceshow'); playPause('tartaglia-audio')" >
+                                    <div class="cv__micro-open" id="tartaglia-voiceshow">
+                                        <audio class="audio-open" id="tartaglia-audio" src="./assets/img/char/figure liyue/music char/tartaglia.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Tartaglia - là một vị khách có tâm tư khó lường đến từ Snezhnaya.
+                                    </p>
+                                    <p>
+                                        Không cần đoán anh ta nghĩ gì, hay chất vấn ý đồ của anh ta là gì. Chỉ cần nhớ rằng: 
+                                        Ẩn dưới vẻ ngoài thơ ngây trẻ con này chính là một chiến sĩ được tôi luyện đỉnh cao.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- zhongli -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="zhongli"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/zhongli gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">ZHONGLI</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: MEANO Tomoaki</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('zhongli-voiceshow'); playPause('zhongli-audio')" >
+                                    <div class="cv__micro-open" id="zhongli-voiceshow">
+                                        <audio class="audio-open" id="zhongli-audio" src="./assets/img/char/figure liyue/music char/zhongli.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Vị khách bí ẩn của Vãng Sinh Đường. Anh ta có vẻ bề ngoài khôi ngô tuấn tú, phong độ lịch lãm và sở hữu kiến thức vượt xa người thường.
+                                    </p>
+                                    <p>
+                                        Mặc dù có lai lịch thần bí, nhưng anh ấy lại biết lễ nghi, hiểu quy định. Tọa trấn Vãng Sinh Đường, có thể thực hiện các nghi lễ của vạn vật trong trời đất.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- xinyan-->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="xinyan"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/xinyan gs .jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">XINYAN</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: TAKAHASHI Chiaki</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('xinyan-voiceshow'); playPause('xinyan-audio')" >
+                                    <div class="cv__micro-open" id="xinyan-voiceshow">
+                                        <audio class="audio-open" id="xinyan-audio" src="./assets/img/char/figure liyue/music char/xinyan.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Ở cảng Liyue, Rock$Roll là loại hình nghệ thuật mới, và Xinyan là người tiên phong trong môn nghệ thuật này.
+                                    </p>
+                                    <p>
+                                        Cô dùng âm nhạc và niềm đam mê hát lên chống lại những "định kiến", muốn đánh thức những linh hồn ảm đảm và mệt mỏi đang làm việc trên thế gian.</p>
+                                    <p>
+                                        Nếu có cơ hội, xin đừng bỏ lỡ buổi biểu diễn của cô ấy nhé.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- ganyu -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="ganyu"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/ganyu gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">GANYU</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: UEDA Reina</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('ganyu-voiceshow'); playPause('ganyu-audio')" >
+                                    <div class="cv__micro-open" id="ganyu-voiceshow">
+                                        <audio class="audio-open" id="ganyu-audio" src="./assets/img/char/figure liyue/music char/ganyu.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Thư ký của Thất Tinh Liyue, trong người chứa huyết mạch của người và tiên thú.
+                                    </p>
+                                    <p>
+                                        Bản tính nhã nhặn trầm tĩnh, nhưng tính cách dịu dàng của tiên thú "kỳ lân" không hề mâu thuẫn với thái độ làm việc kiên quyết của cô ấy.</p>
+                                    <p>
+                                        Dẫu sao, Ganyu tin rằng tất cả mọi việc mà cô ấy làm đều là vì thực hiện khế ước với Đế Quân, và mưu cầu phúc lợi cho người dân ở Liyue.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Hu tao -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="hutao"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/hutao gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">HU TAO</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: TAKAHASHI Rie</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('hutao-voiceshow'); playPause('hutao-audio')" >
+                                    <div class="cv__micro-open" id="hutao-voiceshow">
+                                        <audio class="audio-open" id="hutao-audio" src="./assets/img/char/figure liyue/music char/hutao.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Hu Tao - Đường chủ đời thứ 77 của Vãng Sinh Đường, nhân vật quan trọng phụ trách tang lễ của Liyue.
+                                    </p>
+                                    <p>
+                                        Tận tâm tận lực hoàn thành nghi lễ tiễn biệt cho mọi người, duy trì sự cân bằng giữa hai thế giới âm dương.</p>
+                                    <p>
+                                        Ngoài ra còn là một nhà thơ thần kỳ, có rất nhiều kiệt tác được người Liyue truyền miệng.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Yanfei -->
+                    <li class="list__char-hidden content__list-js content__list-liyue" id="yanfei"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure liyue/yanfei gs.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main2-liyue.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">YANFEI</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: HAHAMORI Yumiri</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('yanfei-voiceshow'); playPause('yanfei-audio')" >
+                                    <div class="cv__micro-open" id="yanfei-voiceshow">
+                                        <audio class="audio-open" id="yanfei-audio" src="./assets/img/char/figure liyue/music char/yangfei.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Yanfei - Người mang dòng máu bán tiên, đồng thời cũng là một cố vấn pháp luật hàng đầu.
+                                    </p>
+                                    <p>
+                                        Cô ấy đã tìm thấy sự cân bằng hoàn hảo giữa việc tuân thủ các quy tắc và nỗ lực thay đổi. Với tư cách là một nhà tư vấn pháp luật dày dặn kinh nghiệm, dốc lòng bảo vệ sự cân bằng trong các khế ước ở Liyue.
+                                    </p>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                </ul>
+                <!-- char page liyue-->
+                <div class="char__page">
+                    <div class="char__listwrap">
+                        <ul class="list__char-slide">
+                            <!-- Xiao -->
+                            <li class="tablink__list-js tablink__char-liyue active" onclick="openinfoChar(event, 'xiao'); currentSlide2(1)"><a>
+                                <img src="./assets/img/char/figure liyue//ava xiao.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Xiao</p>
+                            </a></li>
+                            <!-- beidou -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'beidou'); currentSlide2(2)"><a>
+                                <img src="./assets/img/char/figure liyue/ava beidou.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Beidou</p>
+                            </a></li>
+                            <!-- ningguang -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'ningguang'); currentSlide2(3)" ><a>
+                                <img src="./assets/img/char/figure liyue/ava ningguang.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Ningguang</p>
+                            </a></li>
+                            <!-- xiangling -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'xiangling'); currentSlide2(4)"><a>
+                                <img src="./assets/img/char/figure liyue/ava xiangling.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Xiangling</p>
+                            </a></li>
+                            <!-- xingqiu -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'xingqiu'); currentSlide2(5)"><a>
+                                <img src="./assets/img/char/figure liyue/ava xingqiu.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Xingqui</p>
+                            </a></li>
+                            <!-- Chongyun -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'chongyun'); currentSlide2(6)"><a>
+                                <img src="./assets/img/char/figure liyue/ava chongyun.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Chongyun</p>
+                            </a></li>
+                            <!-- qiqi -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'qiqi'); currentSlide2(7)"><a>
+                                <img src="./assets/img/char/figure liyue/ava qiqi.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Qiqi</p>
+                            </a></li>
+                            <!-- kequing -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'kequing'); currentSlide2(8)"><a>
+                                <img src="./assets/img/char/figure liyue/ava keqing.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Kequing</p>
+                            </a></li>
+                            <!-- tartaglia -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'tarta'); currentSlide2(9)"><a>
+                                <img src="./assets/img/char/figure liyue/ava tartaglia.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Tartaglia</p>
+                            </a></li>
+                            <!-- zhongli-->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'zhongli'); currentSlide2(10)"><a>
+                                <img src="./assets/img/char/figure liyue/ava zhongli.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Zhongli</p>
+                            </a></li>
+                            <!-- xinyan -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'xinyan'); currentSlide2(11)"><a>
+                                <img src="./assets/img/char/figure liyue/ava xinyan.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Xinyan</p>
+                            </a></li>
+                            <!-- ganyu -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'ganyu'); currentSlide2(12)"><a>
+                                <img src="./assets/img/char/figure liyue/ava ganyu.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Ganyu</p>
+                            </a></li>
+                            <!-- hu tao -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'hutao'); currentSlide2(13)"><a>
+                                <img src="./assets/img/char/figure liyue/ava hutao.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Hu Tao</p>
+                            </a></li>
+                            <!-- yanfei -->
+                            <li class="tablink__list-js tablink__char-liyue" onclick="openinfoChar(event, 'yanfei'); currentSlide2(14)"><a>
+                                <img src="./assets/img/char/figure liyue/ava yanfei.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Yanfei</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="btn__pre" onclick="plusSlides2(-1)"></div>
+                    <div class="btn__next"onclick="plusSlides2(1)"></div>
+                </div>
+            </div>
+            <!-- End liyue -->
+
+            <!-- inazuma -->
+            <div class="content__charwrap" style="display: none;" id="main__inazuma">
+                <div class="bg__wrap-inazuma" style="background-image: url(/genshin/assets/img/char/bg-main3.jpg);"></div>
+                <ul class="charmain_wrap-content">
+                    <!-- ayaka -->
+                    <li class="content__list-js" id="ayaka"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure inazuma/kamisato ayaka.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main1-inazuma.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">KAMISATO AYAKA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: HAYAMI Saori</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('ayaka-voiceshow'); playPause('ayaka-audio')" >
+                                    <div class="cv__micro-open" id="ayaka-voiceshow">
+                                        <audio class="audio-open" id="ayaka-audio" src="./assets/img/char/figure inazuma/music inazuma/ayaka.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Đại tiểu thư nhà Kamisato thuộc "Hiệp Hội Yashiro" Inazuma. Đoan trang thanh lịch, thông minh và mạnh mẽ.
+                                    </p>
+                                    <p>
+                                        Đối nhân xử thế chân thành và khéo léo, được người dân Inazuma vô cùng yêu quý nên đã phong cho cô danh hiệu "Shirasagi Himegimi".
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- kazuha -->
+                    <li class="list__char-hidden content__list-js" id="kazuha"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure inazuma/kazuha.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main1-inazuma.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">KAEDEHARA KAZUHA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: SHIMAZAKI Nobunaga</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('kazuha-voiceshow'); playPause('kazuha-audio')" >
+                                    <div class="cv__micro-open" id="kazuha-voiceshow">
+                                        <audio class="audio-open" id="kazuha-audio" src="./assets/img/char/figure inazuma/music inazuma/kazuha.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Ronin Samurai đến từ Inazuma. Con người khiêm tốn có tính cách hoà nhã.
+                                    </p>
+                                    <p>
+                                        Dưới vẻ ngoài trẻ trung phóng khoáng, ẩn chứa rất nhiều chuyện của quá khứ. Trông có vẻ tuỳ hứng nhưng trong lòng lại có quy tắc hành xử của riêng mình.
+                                    </p>                                
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- Yoimiya -->
+                    <li class="list__char-hidden content__list-js" id="yoimiya"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure inazuma/yoimiya.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main1-inazuma.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">YOIMIYA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: UEDA Kana</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('yoimiya-voiceshow'); playPause('yoimiya-audio')" >
+                                    <div class="cv__micro-open" id="yoimiya-voiceshow">
+                                        <audio class="audio-open" id="yoimiya-audio" src="./assets/img/char/figure inazuma/music inazuma/yoimiya.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Nghệ nhân pháo hoa tài năng, chủ nhân hiện tại của "Tiệm Pháo Hoa Naganohara", người được phong là "Nữ Hoàng Lễ Hội Hè".
+                                    </p>
+                                    <p>
+                                        Một cô gái tràn đầy nhiệt huyết. Sự ngây thơ trong sáng của trẻ con và nỗi ám ảnh của người thợ đã hòa quyện vào nhau tạo nên một ngọn lửa phản ứng tuyệt vời trên cơ thể cô.
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- sayu -->
+                    <li class="list__char-hidden content__list-js" id="sayu"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure inazuma/sayu.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main1-inazuma.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">SAYU</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: SUZAKI Aya</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('sayu-voiceshow'); playPause('Sayu-audio')" >
+                                    <div class="cv__micro-open" id="sayu-voiceshow">
+                                        <audio class="audio-open" id="Sayu-audio" src="./assets/img/char/figure inazuma/music inazuma/sayo.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Sayu - Ninja đặc biệt trực thuộc tổ chức bí mật "Shiyuumatsu Ban", luôn theo đuổi ước mơ ngủ ngon và cao lớn.
+                                    </p>
+                                    <p>
+                                        Nắm vững tất cả các nhẫn thuật về trốn thoát và ẩn nấp, để tạo cơ hội cho bản thân được ngủ nhiều hơn.
+                                    </p>
+                                    <p>
+                                        Phương pháp kỳ diệu như vậy hẳn là sẽ có những công dụng bất ngờ.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- raiden shogun-->
+                    <li class="list__char-hidden content__list-js" id="shogun"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure inazuma/raiden shogun.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main1-inazuma.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">RAIDEN SHOGUN</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: SAWASHIRO Miyuki</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('raiden-voiceshow'); playPause('Raiden-audio')" >
+                                    <div class="cv__micro-open" id="raiden-voiceshow">
+                                        <audio class="audio-open" id="Raiden-audio" src="./assets/img/char/figure inazuma/music inazuma/raiden shogun.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p>Raiden Shogun là hoá thân đáng sợ nhất của sấm sét trên thế giới này, cũng là chúa tể tối cao của Inazuma Shogunate.
+                                    </p>
+                                    <p></p>
+                                    <p>
+                                        Mang theo sấm sét đầy quyền lực, kẻ huỷ diệt theo đuổi con đường cô đơn mang tên vĩnh hằng.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                    <!-- sara -->
+                    <li class="list__char-hidden content__list-js" id="sara"><a>
+                        <div class="char__imgwrap">
+                            <img class="char__bg1" src="./assets/img/char/figure inazuma/kujou sara.jpg" alt="">
+                            <img class="char__bg2" src="./assets/img/char/charbg-main1-inazuma.jpg" alt="">
+                        </div>
+                        <div class="char__content">
+                            <h1 class="char__name">KUJOU SARA</h1>
+                            <div class="char__cv">
+                                <div class="cv__text">
+                                    <div class="cv__img-dot">
+                                        <img src="./assets/img/char/dotCV.jpg" alt="">
+                                    </div>
+                                    <div class="cv__name">
+                                        <h2>CV: SETO Asami</h2>
+                                    </div>
+                                </div>
+                                <div class="cv__micro"  onclick="openMusic('Sara-voiceshow'); playPause('sara-audio')" >
+                                    <div class="cv__micro-open" id="Sara-voiceshow">
+                                        <audio class="audio-open" id="sara-audio" src="./assets/img/char/figure inazuma/music inazuma/sara.mp3"></audio>
+                                    </div>
+                                </div>                                
+                                <div class="cv__switch">
+                                    <span class="switch__JP">JP</span>
+                                    <span class="switch__EN">
+                                        <i class="fas fa-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="char__info">
+                                <div class="dot__content">
+                                    <img src="./assets/img/char/dotContent.jpg" alt="">
+                                </div>
+                                <div class="text__content">
+                                    <p> Đại tướng của Hiệp Hội Tenryou. Tác phong như gió, coi trọng chữ tín, và là một cô gái rất quyết đoán.
+                                    </p>
+                                    <p>
+                                        Cô ấy còn có tên là "Tín Đồ Của Thần", một lòng trung thành với Raiden Shogun.</p>
+                                    <p>
+                                        Sự "vĩnh hằng" mà Shogun theo đuổi, cũng chính là đức tin mà cô ấy nguyện chiến đấu vì nó.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                </ul>
+                <!-- char page inazuma-->
+                <div class="char__page">
+                    <div class="char__listwrap">
+                        <ul class="list__char-slide">
+                            <!-- ayaka -->
+                            <li class="tablink__list-js active" onclick="openinfoChar(event, 'ayaka')"><a>
+                                <img src="./assets/img/char/figure inazuma/ava ayaka.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Kamisato Ayaka</p>
+                            </a></li>
+                            <!-- keadehara kazuha -->
+                            <li class="tablink__list-js" onclick="openinfoChar(event, 'kazuha')" ><a>
+                                <img src="./assets/img/char/figure inazuma/ava kazuha.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Kaedehara Kazuha</p>
+                            </a></li>
+                            <!-- yoimiya -->
+                            <li class="tablink__list-js" onclick="openinfoChar(event, 'yoimiya')" ><a>
+                                <img src="./assets/img/char/figure inazuma/ava Yoimiya.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Yoimiya</p>
+                            </a></li>
+                            <!-- sayu -->
+                            <li class="tablink__list-js" onclick="openinfoChar(event, 'sayu')"><a>
+                                <img src="./assets/img/char/figure inazuma/ava sayu.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Sayu</p>
+                            </a></li>
+                            <!-- raiden shogun -->
+                            <li class="tablink__list-js" onclick="openinfoChar(event, 'shogun')"><a>
+                                <img src="./assets/img/char/figure inazuma/ava raiden shogun.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Raiden  Shogun</p>
+                            </a></li>
+                            <!-- kujou sara-->
+                            <li class="tablink__list-js" onclick="openinfoChar(event, 'sara')"><a>
+                                <img src="./assets/img/char/figure inazuma/ava kujou sara.jpg" alt="" class="ava__char">
+                                <p class="name__avachar">Kujou Sara</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End inazuma -->
+        </div>
+
+        <!-- footer -->
+        <div id="footer">
+            <div class="footer__top">
+                <div class="footer__icons">
+                    <ul class="list__icons">
+                        <li><a>
+                            <i class="fab fa-facebook-f"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fab fa-youtube"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fas fa-camera"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fas fa-atom"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fas fa-globe"></i>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer__languages">
+                    <ul class="languages__block">
+                        <li><a class="pointer">
+                            <i class="fas fa-globe-asia"></i>
+                        </a></li>
+                        <li><a class="pointer">
+                            <p>Tiếng Việt</p>
+                        </a></li>
+                        <li class="js-ic-arrow"><a class="pointer">
+                            <i class="fas fa-caret-down footer__ic-arrow"></i>
+                        </a>
+                            <div class="footer__languages-wrap js-languages-wrap">
+                                <ul class="list__languages">
+                                    <li><a href="">
+                                        中文（繁體）
+                                    </a></li>
+                                    <li><a href="">
+                                        Deutsch
+                                    </a></li>
+                                    <li><a href="">
+                                        English
+                                    </a></li>
+                                    <li><a href="">
+                                        Español
+                                    </a></li>
+                                    <li><a href="">
+                                        Français
+                                    </a></li>
+                                    <li><a href="">
+                                        Tiếng Việt
+                                    </a></li>
+                                    <li><a href="">
+                                        日本語
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__main">
+                <div class="footer__wrap">
+                    <div class="footer__content">
+                        <div class="footer__content-logo">
+                            <div class="img__logo">
+                                <img src="./assets/img/logo footer1.png" alt="">
+                            </div>
+                            <div class="logo__game">
+                                <img src="./assets/img/Logogs.png" alt="">
+                            </div>
+                        </div>
+                        <div class="footer__content-info">
+                            <div class="links text">
+                                <a href="">Chính Sách Về Quyền Riêng Tư</a>
+                                <a href="">Điều Khoản Dịch Vụ</a>
+                                <br>
+                                <br>
+                                <a href="">Giới Thiệu Công Ty</a>
+                                <a href="">Liên Hệ Chúng Tôi</a>
+                            </div>
+                            <div class="coppy__right text">
+                                Copyright © 2020 miHoYo All Rights Reserved
+                            </div>
+                            <div class="extra__info text">
+                                "PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
+                            </div>
+                            <div class="epic text">
+                                <p>Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- end footer -->
+        
+    </div>
+
+    <!-- Modal -->
+    <div class="modal js-modal">
+        <div class="modal__container js-modalContainer">
+            <div class="modal__header">
+                <img src="./assets/img/login.png" alt="">
+            </div>
+
+            <div class="modal__close js-modal-close">
+                <i class="fas fa-times modal__close-ic"></i>
+            </div>
+            <div class="clear"></div>
+
+            <div class="modal__body">
+                <!-- attribute for trong thẻ label chỉ sd với id -->
+                <label for="modal-user" class="modal__label">
+                    <i class="fas fa-user"></i>
+                    Tài Khoản:
+                </label>
+                <input id="modal-user" type="text" class="modal__input-user" placeholder="Tên Người Dùng/ Email">
+
+                <label for="modal-pass" class="modal__label">
+                    <i class="fas fa-key"></i>
+                    Mật Khẩu:
+                </label>
+                <input id="modal-pass" type="password" class="modal__input-pass" placeholder="Mật Khẩu">
+
+                <button class="modal__login">
+                    Đăng Nhập
+                </button>
+                
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-head">
+                    <a href="">Request Support</a>
+                    <a href="">Registration</a>
+                </div>
+
+                <p class="modal__footer-subhead">Hoặc đăng nhập bằng các tài khoản sau</p>
+
+                <div class="modal__footer-icon">
+                    <img src="./assets/img/logo fb.png" alt="">
+                    <img src="./assets/img/logo twt.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+                setTimeout(() => {
+                    $(".song.active").scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    })
+                }, 300)
+            -->
+    <script>
+        // header music
+        var btnMusicShow = document.querySelector(".header__musicShow");
+        var btnMusicHide = document.querySelector(".header__musicHide");
+        var audioHeader = document.querySelector(".header__musicShow audio")
+
+        btnMusicShow.addEventListener("click" , function(){
+            btnMusicHide.style.visibility = "visible";
+            btnMusicShow.style.visibility = "hidden";
+            audioHeader.pause();
+        })
+
+        btnMusicHide.addEventListener("click" , function(){
+            btnMusicHide.style.visibility = "hidden";
+            btnMusicShow.style.visibility = "visible";
+            audioHeader.play();
+        })
+
+        // phần modal-login
+        const loginHead = document.querySelector(".js-login")
+        const modal = document.querySelector(".js-modal")
+        const modalContainer = document.querySelector(".js-modalContainer")
+        const modalClose =document.querySelector(".js-modal-close")
+
+        // hàm hiển thị modal login (thêm class open vào modal)
+        function showModalLogin () {
+            modal.classList.add("open")
+        }
+
+        // hàm ẩn modal login (xóa class open khỏi của modal)
+        function hideModalLogin () {
+            modal.classList.remove("open")
+        }
+
+        // nghe hành vi click vào phần login trên header
+        loginHead.addEventListener ("click", showModalLogin)
+
+        // nghe hành vi click vào phần close trong modal
+        modalClose.addEventListener ("click",hideModalLogin)
+
+        modal.addEventListener("click",hideModalLogin )
+
+        modalContainer.addEventListener ("click", function(event) {
+            event.stopPropagation()
+        })
+
+        // phần footer languages ic arrow (click vào icon ẩn hiện liên tục )
+        // click languages footer
+        const languagesWrap = document.querySelector(".js-languages-wrap")
+        const listLanguagesClick = document.querySelector(".footer__languages")
+        const listLanguagesItems = document.querySelector(".list__languages")
+        var x= true ;
+        
+        function showHideLanguages () {
+            if(x) {
+                languagesWrap.style.display = "none";               
+                x= false;
+            } else {
+                languagesWrap.style.display = "block";    
+                x= true ;
+            }
+        }
+        
+        listLanguagesClick.addEventListener ("click",showHideLanguages);
+        listLanguagesClick.addEventListener("click",function(event){
+            event.stopPropagation()
+        })
+        
+        listLanguagesItems.addEventListener("click",function(event){
+            event.stopPropagation()
+        })
+        // end phần footer languages ic arrow
+
+        // click list char 
+        var i;
+        var tabchars__content , tablinks__char , text__Char;
+        tablinks__char = document.querySelectorAll(".tablink__list-js");
+        tabchars__content = document.querySelectorAll(".content__list-js");
+        text__Char = document.querySelectorAll(".name__avachar");
+        // list char bottom
+        function openinfoChar(event,infoChar) {
+            var i;
+            for (i = 0; i < tabchars__content.length; i++) {
+                tabchars__content[i].style.display = "none";
+            }
+            document.getElementById(infoChar).style.display = "block";
+            for (i = 0; i < tablinks__char.length; i++) {
+                tablinks__char[i].className = tablinks__char[i].className.replace(" active", "");
+            }
+            for (i=0; i< text__Char.length;i++){
+                text__Char[i].className = text__Char[i].className.replace("active","");
+            }
+            event.currentTarget.className += " active";
+            event.currentTarget.scrollIntoView(false, {
+                        behavior: "auto",
+                        block: "center",
+                        inline: "center"
+            });
+        }
+
+        // click slidebar
+        var slidebar__link = document.querySelectorAll(".bgmain__link");
+        var city__main = document.querySelectorAll(".content__charwrap");
+        var btnCity = document.querySelector(".sidebar__btn-click");
+        function openSlider(event,city,infoChar){
+            var i;
+            for (i=0; i < city__main.length; i++){
+                city__main[i].style.display= "none";
+            }
+            document.getElementById(city).style.display="block";
+            for (i = 0; i < tabchars__content.length; i++) {
+                tabchars__content[i].style.display = "none";
+            }
+            document.getElementById(infoChar).style.display = "block";
+            for (i=0;i<slidebar__link.length;i++){
+                slidebar__link[i].className = slidebar__link[i].className.replace("bgshow","")
+            }
+            event.currentTarget.className = event.currentTarget.className + "bgshow";
+
+        }
+
+        function chooseCity(i = 0){
+            switch(i){
+                case 0 :{
+                    btnCity.innerHTML = "Mondstadt"
+                    break;
+                }
+                case 1 :{
+                    btnCity.innerHTML = "Liyue"
+                    break;
+                }
+                case 2 :{
+                    btnCity.innerHTML = "Inazuma"
+                    break;
+                }
+            }
+        }
+
+        var listCity_Wrap = document.querySelector(".char__wrap")
+        var listSidebar_city = document.querySelector(".list__sidebar")
+        btnCity.addEventListener("click" , function openListCityTabletMobile(){
+            if(x){
+                listSidebar_city.style.display = "none"
+                listCity_Wrap.style.zIndex = "50"
+                x = false
+            }else{
+                listSidebar_city.style.display = "block"
+                listCity_Wrap.style.zIndex = "1000"
+                x = true
+            }
+        })
+
+        console.log(listCity_Wrap.style)
+
+        // showslide mond
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        var slides = document.getElementsByClassName("list__char-mond");
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("list__char-mond");
+            var dots = document.getElementsByClassName("avachar__mond");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                
+            dots[slideIndex-1].scrollIntoView(false, {
+                behavior: "auto",
+                block: "center",
+                inline: "center"
+            });
+        }
+
+        // slideshow liyue
+        var slideIndex2 = 1;
+        showSlidesLiyue(slideIndex2);
+
+        function plusSlides2(n){
+            showSlidesLiyue(slideIndex2 += n);
+        }
+
+        function currentSlide2(n){
+            showSlidesLiyue(slideIndex2 = n);
+        }
+        var slides2 =document.querySelectorAll(".content__list-liyue")
+        var dots2 =document.querySelectorAll(".tablink__char-liyue")
+
+        function showSlidesLiyue(n) {
+            var i;
+            var slides2 =document.querySelectorAll(".content__list-liyue")
+            var dots2 =document.querySelectorAll(".tablink__char-liyue")
+            console.log(dots2);
+            if (n > slides2.length) {slideIndex2 = 1}    
+            if (n < 1) {slideIndex2 = slides2.length}
+            for (i = 0; i < slides2.length; i++) {
+                slides2[i].style.display = "none";  
+            }
+            for (i = 0; i < dots2.length; i++) {
+                dots2[i].className = dots2[i].className.replace(" active", "");
+            }
+                slides2[slideIndex2-1].style.display = "block";  
+                dots2[slideIndex2-1].className += " active";
+                
+            dots2[slideIndex2-1].scrollIntoView(false, {
+                behavior: "auto",
+                block: "center",
+                inline: "center"
+            });
+        }
+
+        // open music
+        var micro__click = document.querySelectorAll(".cv__micro");
+        var micro__show =document.querySelectorAll(".cv__micro-open");
+        var audio__open = document.querySelectorAll(".audio-open");
+        for (let i = 0; i < audio__open.length; i++) {
+            audio__open[i].addEventListener("ended", function() {
+                micro__show[i].style.display = "none";
+            })
+            audio__open[i].addEventListener("pause", function() {
+                micro__show[i].style.display = "none";
+            })
+        }
+        function openMusic(audioID){
+            for(var i = 0; i < micro__show.length;i++){
+                micro__show[i].style.display="none";
+            }
+            document.getElementById(audioID).style.display="block";
+        }
+
+        // click btn open voice
+        function playPause(soundID){
+            let sound = document.querySelector("#" + soundID);
+            if (sound.paused || !sound.played) {
+                sound.play();
+            } else {
+                sound.pause();
+            }
+        }
+
+        function clearMusic() {
+            for (let i = 0; i < micro__show.length ; i++){
+                micro__show[i].style.display = "none";
+            }
+            for (let i = 0; i < audio__open.length; i++) {
+                audio__open[i].pause();
+                audio__open[i].currentTime = 0;
+            }
+        }
+
+        for (let i = 0; i < tablinks__char.length ; i++){
+            tablinks__char[i].addEventListener("click" , clearMusic);
+        }
+
+        // menu tablet-mobile
+        var menu_header = document.querySelector(".header-nav__menu")
+        var navMenu_header = document.querySelector(".nav")
+        var closeMenu = document.querySelector(".nav__close .fa-times")
+        var mainModel = document.querySelector(".js-main")
+        menu_header.addEventListener("click",function showMenu(){
+            // navMenu_header.style.display = "block"
+            navMenu_header.classList.add("block")
+        })
+
+        closeMenu.addEventListener("click",function hideMenu(){
+            // navMenu_header.style.display = "none"
+            navMenu_header.classList.remove("block")
+        })
+
+        // co phan ic langguages
+        mainModel.addEventListener("click",function hideMenu(){
+            languagesWrap.style.display = "none"
+        })
+        // end ic languages
+        
+        menu_header.addEventListener("click",function(event){
+            event.stopPropagation()
+        })
+
+        navMenu_header.addEventListener("click",function(event){
+            event.stopPropagation()
+        })
+
+    </script>
+    </div>
+</body>
+</html>

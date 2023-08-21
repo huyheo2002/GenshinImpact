@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/responsive/respon-home.css">
+    <title>Genshin Impact</title>
+</head>
+<body>
+    <div id="main" class="js-main">
+        <div class="header-nav__menu-mobi header__menu-mobile-js">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div id="header">
+            <div class="header__left">
+                <div class="header__logo">
+                    <div class="header__musicShow">
+                        <audio src="./assets/audio/ThemeMusic.mp3"></audio>
+                    </div>
+                    <div class="header__musicHide"></div>
+                    <img src="./assets/img/Logogs.png" alt="logo">
+                </div>
+                <div class="header__nav">
+                    <!-- add menu tablet mobile -->
+                    <div class="header-nav__menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <!-- end menu tablet-mobile -->
+                    <ul class="nav">
+                        <!-- close tablet mobile -->
+                        <li class="nav__close"><a href="#">
+                            <i class="fas fa-times"></i>
+                        </a></li>
+                        <!-- end close tablet-mobile -->
+                        <li class="border__original"><a href="./home.html" class="home__original">Trang Chủ</a></li>
+                        <li><a href="./news.html">Tin Tức</a></li>
+                        <li><a href="./character.html">Nhân Vật</a></li>
+                        <li><a>Tư Liệu
+                            <i class="nav__arrow-down fas fa-caret-down"></i>
+                        </a>
+                            <ul class="subnav">
+                                <li><a href="./reviewgame.html">Giới Thiệu Game</a></li>
+                                <li><a href="./world.html">Thế Giới</a></li>
+                                <li><a href="./town.html">Tạp Chí</a></li>
+                                <li><a href="./comic.html">Truyện Tranh</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Khác
+                            <i class="nav__arrow-down fas fa-caret-down"></i>
+                        </a>
+                            <ul class="subnav">
+                                <li><a href="">HoYoLAB</a></li>
+                                <li><a href="">Trung Tâm Nạp</a></li>
+                                <li><a href="">Mã Quà</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__right">
+                <ul class="nav__right">
+                    <li class="js-login"><a class="pointer">Đăng Nhập
+                        <i class="navr__user fas fa-user"></i>
+                    </a></li>
+                    <li class="header__download"><a href="">Tải Game</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- slider -->
+        <div id="slider">
+            <video autoplay loop class="slider__video" 
+            src="./assets/img/video_slider.mp4">
+            </video>
+            <!-- mobile -->
+            <div class="slider__poster">
+                <img src="./assets/img/genshin-bg-mobile.jpg" alt="">
+            </div>
+            <!-- end img bg mobile -->
+            <div class="slider__content">
+                <div class="button__video">
+                    <button class="button_play">                        
+                        <i class="fas fa-play-circle ic__play"></i>
+                        <i class="fas fa-play ic__play"></i>
+                    </button>
+                </div>
+                <p>Chính thức ra mắt trên nhiều nền tảng, đến tải ngay
+                </p>
+                <div class="items__img">
+                    <ul class="items__img--list">
+                        <li><a href=""><img src="./assets/img/PS4.png" alt="PS4"></a></li>
+                        <li><a href=""><img src="./assets/img/appStr.png" alt="App Store"></a></li>
+                        <li><a href=""><img src="./assets/img/GGPL.png" alt="Google Play"></a></li>
+                        <li><a href=""><img src="./assets/img/WD.png" alt="Windown"></a></li>
+                    </ul>
+                </div>
+                <!-- add arrow-poster chua xg-->
+            </div>
+        </div>
+        <div id="news">
+            <img class="news__bg" src="./assets/img/news bg.jpg" alt="">
+            <div class="news__items">
+                <h3 class="new__h3"> Tin Tức </h3>
+                <div class="news__main">
+                    <div class="news__img">
+                        <div class="news__imgSlide">
+                            <img src="./assets/img/news1.jpg" alt="">
+                        </div>
+                        <div class="news__imgSlide hidden">
+                            <img src="./assets/img/news2.jpg" alt="">
+                        </div>
+                        <div class="news__imgSlide hidden">
+                            <img src="./assets/img/news3.jpg" alt="">
+                        </div>
+                        <div class="news__imgSlide hidden">
+                            <img src="./assets/img/news4.jpg" alt="">
+                        </div>
+
+                        <div class="news__imgListdot">
+                            <i class="fas fa-circle active"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <div class="news__content">
+                        <ul class="news__title">
+                            <li><a href="">Mới</a></li>
+                        </ul>
+                        <ul class="news__list">
+                            <li><a class="news__list--item" title=" Sự kiện có thưởng ''Giao Ước Bạch Hạc'' đã mở " href="">
+                                <p class="news__ellipsis">Sự kiện có thưởng "Giao Ước Bạch Hạc" đã mở</p>
+                                <p class="news__date">26/7/2021</p>
+                            </a></li>
+                            <li><a class="news__list--item" title="[Genshin Impact] - [Kamisato Ayaka: Hạc Vũ Băng Hoa]" href="">
+                                <p class="news__ellipsis">[Genshin Impact] - [Kamisato Ayaka: Hạc Vũ Băng Hoa]</p>
+                                <p class="news__date">21/7/2021</p>
+                            </a></li>
+                            <li><a class="news__list--item" title="Hướng dẫn cách chơi 'Truy Tìm Vết Sấm' " href="">
+                                <p class="news__ellipsis">Hướng dẫn cách chơi "Truy Tìm Vết Sấm"</p>
+                                <p class="news__date">21/7/2021</p>
+                            </a></li>
+                            <li><a class="news__list--item" title="Giới thiệu cập nhật phiên bản 2.0 'Lôi thần uy nghiêm , Bất sinh bất diệt' " href="">
+                                <p class="news__ellipsis">Giới thiệu cập nhật phiên bản 2.0 "Lôi thần uy nghiêm , Bất sinh bất diệt"</p>
+                                <p class="news__date">21/7/2021</p>
+                            </a></li>
+                            <li><a class="news__list--item" title="Giới thiệu nhân vật trong Genshin Impact - Kamisato Ayaka: Hoa Nở Tuyết Tan" href="">
+                                <p class="news__ellipsis">Giới thiệu nhân vật trong Genshin Impact - Kamisato Ayaka: Hoa Nở Tuyết Tan</p>
+                                <p class="news__date">20/7/2021</p>
+                            </a></li>
+                        </ul>
+                        <!-- new more -> mobile tablet -->
+                        <div class="new__more-tablet-mobile">
+                            <div class="news__more-btn">
+                                <p>Tải Thêm</p>
+                            </div>    
+                        </div>
+                        <!-- end new more mobile-tablet -->
+                        <a class="news__more" href="">
+                            <!-- <i class="fas fa-plus-circle icon__more"></i> -->
+                            <i class="fa-solid fa-plus icon__more"></i>
+                            Tải Thêm
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="city">
+            <ul class="city__list">
+                <li class="city__list-item items__hover city__border"><a href="">
+                    <div class="city__list-bg" style="background: url(./assets/img/city1.jpg) center/cover no-repeat;" >
+                        <div class="city__list-Overlay"></div>
+                    </div>
+                    <div class="city__bg-star"></div>
+                    <img src="./assets/img/jean gs.png" alt="">
+                    <p class="city__items-textShow">Mondstadt</p>
+                </a></li>
+                <li class="city__list-item items__hover city__border"><a href="">
+                    <div class="city__list-bg" style="background: url(./assets/img/city2.jpg) center/cover no-repeat;">
+                        <div class="city__list-Overlay"></div>
+                    </div>
+                    <div class="city__bg-star"></div>
+                    <img src="./assets/img/xiao gs.png" alt="">
+                    <p class="city__items-textShow">Liyue</p>
+                </a></li>
+                <li class="city__list-item items__hover city__border"><a href="">
+                    <div class="city__list-bg" style="background: url(./assets/img/city3.jpg) center/cover no-repeat;">
+                        <div class="city__list-Overlay"></div>
+                    </div>
+                    <div class="city__bg-star"></div>
+                    <img src="./assets/img/ayaka gs.png" alt="">
+                    <p class="city__items-textShow">Inazuma</p>
+                </a></li>
+                <li class="city__list-item reloadcity">
+                    <div class="city__list-bg reloadcity" style="background: url(./assets/img/reload\ city.jpg) center no-repeat;"></div>
+                    <p>Vui Lòng đợi</p>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="footer">
+            <div class="footer__top">
+                <div class="footer__icons">
+                    <ul class="list__icons">
+                        <!-- add title footer -->
+                        <h3 class="footer__title"> Theo Dõi Chúng Tôi </h3>
+                        <!-- end tittle footer -->
+                        <!--  add card-iconwrap / name ic . . .  mobile -->
+                        <li><a href="">
+                            <div class="icon-wrap__left">
+                                <i class="fab fa-facebook-f"></i>
+                                <p>Facebook</p>
+                            </div>
+                            <div class="icon-wrap__right">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a></li>
+                        <li><a href="">
+                            <div class="icon-wrap__left">
+                                <i class="fab fa-twitter"></i>
+                                <p>Twittet</p>
+                            </div>
+                            <div class="icon-wrap__right">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a></li>
+                        <li><a href="">
+                            <div class="icon-wrap__left">
+                                <i class="fab fa-youtube"></i>
+                                <p>Youtube</p>
+                            </div>
+                            <div class="icon-wrap__right">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>                            
+                        </a></li>
+                        <li><a href="">
+                            <div class="icon-wrap__left">
+                                <i class="fab fa-instagram"></i>
+                                <p>Instagram</p>
+                            </div>
+                            <div class="icon-wrap__right">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>                            
+                        </a></li>
+                        <li><a href="">
+                            <div class="icon-wrap__left">
+                                <i class="fab fa-discord"></i>
+                                <p>Discord</p>
+                            </div>
+                            <div class="icon-wrap__right">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>                            
+                        </a></li>
+                        <li><a href="">
+                            <div class="icon-wrap__left">
+                                <i class="fab fa-reddit-alien"></i>
+                                <p>Reddit</p>
+                            </div>
+                            <div class="icon-wrap__right">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>                            
+                        </a></li>
+                        <li><a href="" class="footer_icon-border">
+                            <div class="icon-wrap__left">
+                                <i class="far fa-smile-wink"></i>
+                                <p>HoYoLAB</p>
+                            </div>
+                            <div class="icon-wrap__right">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>                            
+                        </a></li>
+                        <!-- end ic wrap left (ic name-ic) ic wrap right(arrow right) -->
+                    </ul>
+                </div>
+                <div class="footer__languages">
+                    <ul class="languages__block">
+                        <li><a class="pointer">
+                            <i class="fas fa-globe-asia"></i>
+                        </a></li>
+                        <li><a class="pointer">
+                            <p>Tiếng Việt</p>
+                        </a></li>
+                        <li class="js-ic-arrow"><a class="pointer">
+                            <i class="fas fa-caret-down footer__ic-arrow"></i>
+                        </a>
+                            <div class="footer__languages-wrap js-languages-wrap">
+                                <ul class="list__languages">
+                                    <li><a href="">
+                                        中文（繁體）
+                                    </a></li>
+                                    <li><a href="">
+                                        Deutsch
+                                    </a></li>
+                                    <li><a href="">
+                                        English
+                                    </a></li>
+                                    <li><a href="">
+                                        Español
+                                    </a></li>
+                                    <li><a href="">
+                                        Français
+                                    </a></li>
+                                    <li><a href="">
+                                        Tiếng Việt
+                                    </a></li>
+                                    <li><a href="">
+                                        日本語
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__main">
+                <div class="footer__wrap">
+                    <div class="footer__content">
+                        <div class="footer__content-logo">
+                            <div class="img__logo">
+                                <img src="./assets/img/logo footer1.png" alt="">
+                            </div>
+                            <div class="logo__game">
+                                <img src="./assets/img/Logogs.png" alt="">
+                            </div>
+                        </div>
+                        <div class="footer__content-info">
+                            <div class="links text">
+                                <a href="">Chính Sách Về Quyền Riêng Tư</a>
+                                <a href="">Điều Khoản Dịch Vụ</a>
+                                <br>
+                                <br>
+                                <a href="">Giới Thiệu Công Ty</a>
+                                <a href="">Liên Hệ Chúng Tôi</a>
+                            </div>
+                            <div class="coppy__right text">
+                                Copyright © 2020 miHoYo All Rights Reserved
+                            </div>
+                            <div class="extra__info text">
+                                "PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
+                            </div>
+                            <div class="epic text">
+                                <p>Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal js-modal">
+        <div class="modal__container js-modalContainer">
+            <div class="modal__header">
+                <img src="./assets/img/login.png" alt="">
+            </div>
+
+            <div class="modal__close js-modal-close">
+                <i class="fas fa-times modal__close-ic"></i>
+            </div>
+            <div class="clear"></div>
+
+            <div class="modal__body">
+                <!-- attribute for trong thẻ label chỉ sd với id -->
+                <label for="modal-user" class="modal__label">
+                    <i class="fas fa-user"></i>
+                    Tài Khoản:
+                </label>
+                <input id="modal-user" type="text" class="modal__input-user" placeholder="Tên Người Dùng/ Email">
+
+                <label for="modal-pass" class="modal__label">
+                    <i class="fas fa-key"></i>
+                    Mật Khẩu:
+                </label>
+                <input id="modal-pass" type="password" class="modal__input-pass" placeholder="Mật Khẩu">
+
+                <button class="modal__login">
+                    Đăng Nhập
+                </button>
+                
+            </div>
+
+            <div class="modal__footer">
+                <div class="modal__footer-head">
+                    <a href="">Request Support</a>
+                    <a href="">Registration</a>
+                </div>
+
+                <p class="modal__footer-subhead">Hoặc đăng nhập bằng các tài khoản sau</p>
+
+                <div class="modal__footer-icon">
+                    <img src="./assets/img/logo fb.png" alt="">
+                    <img src="./assets/img/logo twt.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // header music-open
+        var btnMusicShow = document.querySelector(".header__musicShow");
+        var btnMusicHide = document.querySelector(".header__musicHide");
+        var audioHeader = document.querySelector(".header__musicShow audio")
+
+        btnMusicShow.addEventListener("click" , function(){
+            btnMusicHide.style.visibility = "visible";
+            btnMusicShow.style.visibility = "hidden";
+            audioHeader.pause();
+        })
+
+        btnMusicHide.addEventListener("click" , function(){
+            btnMusicHide.style.visibility = "hidden";
+            btnMusicShow.style.visibility = "visible";
+            audioHeader.play();
+        })
+
+        // news error
+        var newsSlideHot = document.querySelectorAll(".news__imgSlide");
+        var listDotSlideHot = document.querySelectorAll(".news__imgListdot i");
+
+        var slideHotCurrent = 0;
+        function showSlideHot(index){
+            if(index >= newsSlideHot.length){
+                index = 0;
+            }else if(index < 0){
+                index = newsSlideHot.length - 1;
+            }
+            newsSlideHot[slideHotCurrent].classList.add("hidden");
+            newsSlideHot[index].classList.remove("hidden");
+            listDotSlideHot[slideHotCurrent].classList.remove("active");
+            listDotSlideHot[index].classList.add("active");
+            slideHotCurrent = index;
+        }
+
+        function slideHotAutoForward(){
+            showSlideHot(slideHotCurrent + 1);
+        }
+        setInterval(slideHotAutoForward,3500);
+
+        for(let i = 0 ; i < listDotSlideHot.length ; i++){
+            listDotSlideHot[i].addEventListener("click" , function(){
+                showSlideHot(i);
+            })
+        }
+
+        // phần modal-login
+        const loginHead = document.querySelector(".js-login")
+        const modal = document.querySelector(".js-modal")
+        const modalContainer = document.querySelector(".js-modalContainer")
+        const modalClose =document.querySelector(".js-modal-close")
+
+        // hàm hiển thị modal login (thêm class open vào modal)
+        function showModalLogin () {
+            modal.classList.add("open")
+        }
+
+        // hàm ẩn modal login (xóa class open khỏi của modal)
+        function hideModalLogin () {
+            modal.classList.remove("open")
+        }
+
+        // nghe hành vi click vào phần login trên header
+        loginHead.addEventListener ("click", showModalLogin)
+
+        // nghe hành vi click vào phần close trong modal
+        modalClose.addEventListener ("click",hideModalLogin)
+
+        modal.addEventListener("click",hideModalLogin )
+
+        modalContainer.addEventListener ("click", function(event) {
+            event.stopPropagation()
+        })
+
+
+        // phần footer languages ic arrow (click vào icon ẩn hiện liên tục )
+        // click languages footer
+        const languagesWrap = document.querySelector(".js-languages-wrap")
+        const listLanguagesClick = document.querySelector(".footer__languages")
+        const listLanguagesItems = document.querySelector(".list__languages")
+        var x= true ;
+        
+        function showHideLanguages () {
+            if(x) {
+                languagesWrap.style.display = "none";               
+                x= false;
+            } else {
+                languagesWrap.style.display = "block";    
+                x= true ;
+            }
+        }
+        
+        listLanguagesClick.addEventListener ("click",showHideLanguages);
+
+        listLanguagesClick.addEventListener("click",function(event){
+            event.stopPropagation()
+        })
+        
+        listLanguagesItems.addEventListener("click",function(event){
+            event.stopPropagation()
+        })
+        // languagesIcArrow.addEventListener ("click",showHideLanguages);
+        // end phần footer languages ic arrow
+
+        // windown scroll header
+        var menu_mobile = document.querySelector(".header__menu-mobile-js")
+        var header_mobile = document.querySelector("#header")
+        window.addEventListener('scroll',function(){
+            var value__scrollY = window.scrollY;
+            menu_mobile.style.top = value__scrollY + "px"
+            // menu_mobile.style.display = "none"
+            // header_mobile.style.display = "flex"
+            menu_mobile.classList.add("hidden");
+            header_mobile.classList.add("block");
+
+            // // mobile scroll up 
+            if(value__scrollY <= menu_mobile.getBoundingClientRect().height){
+                // menu_mobile.style.display = "block"
+                // header_mobile.style.display = "none"
+                menu_mobile.classList.remove("hidden");
+                header_mobile.classList.remove("block");
+            }
+        })
+
+        // menu tablet-mobile
+        var menu_header = document.querySelector(".header-nav__menu")
+        var navMenu_header = document.querySelector(".nav")
+        var closeMenu = document.querySelector(".nav__close .fa-times")
+        var mainModel = document.querySelector(".js-main")
+        menu_header.addEventListener("click",function showMenu(){
+            // navMenu_header.style.display = "block"
+            navMenu_header.classList.add("block")
+        })
+
+        closeMenu.addEventListener("click",function hideMenu(){
+            // navMenu_header.style.display = "none"
+            navMenu_header.classList.remove("block")
+        })
+        // co phan ic langguages
+        mainModel.addEventListener("click",function hideMenu(){
+            // navMenu_header.style.display = "none"
+            languagesWrap.style.display = "none"
+        })
+        
+        menu_header.addEventListener("click",function(event){
+            event.stopPropagation()
+        })
+
+        navMenu_header.addEventListener("click",function(event){
+            event.stopPropagation()
+        })
+
+    </script>
+</body>
+</html>
